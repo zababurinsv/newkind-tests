@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zababurinsv/newkind-test.git"
+    "url": "git+https://github.com/zababurinsv/newkind-tests.git"
   },
   "bugs": {
-    "url": "https://github.com/zababurinsv/newkind-test/issues"
+    "url": "https://github.com/zababurinsv/newkind-tests/issues"
   },
-  "homepage": "https://github.com/zababurinsv/newkind-test#readme",
+  "homepage": "https://github.com/zababurinsv/newkind-tests#readme",
   "keywords": [
     "task",
     "manager"
