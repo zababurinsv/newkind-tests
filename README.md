@@ -1,4 +1,4 @@
-# z-events
+# @newkind/tests
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -12,13 +12,13 @@ It is librari for easy to use test of mocha.js devTool eruda and events bus for 
 
 ### Install
 
-Installing `z-events` with npm
+Installing `@newkind/tests` with npm
 ```console
-$ npm i z-events
+$ npm i @newkind/tests
 ```
-Installing `z-events` with yarn
+Installing `@newkind/tests` with yarn
 ```console
-$ yarn add z-events
+$ yarn add @newkind/tests
 ```
 
 ## License
