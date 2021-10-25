@@ -21,6 +21,25 @@ Installing `@newkind/tests` with yarn
 $ yarn add @newkind/tests
 ```
 
+#### Include modules
+```textmate
+    emoji
+    isEmpty
+    events
+    assert
+    expect
+    should
+```
+
+#### example
+```js
+    import { tests, list, devTool } from './index.mjs'
+    (async ()=>{
+        let test = await list()
+        await tests() // default demo tests
+    })()
+```
+
 ## License
 
 *GNU GENERAL PUBLIC LICENSE version 3* by [Zababurin Sergey](https://raw.githubusercontent.com/zababurinsv/z-events/master/LICENSE) converted to Markdown. Read the [original GPL v3](http://www.gnu.org/licenses/).

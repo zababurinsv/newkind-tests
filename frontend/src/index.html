@@ -7,12 +7,10 @@
 </head>
 <body></body>
 <script type="module">
-    import { tests } from './index.mjs'
-    import { list } from './index.mjs'
+    import { tests, list, devTool } from './index.mjs'
     (async ()=>{
         let test = await list()
-        await tests()
-        // await tests(`http://localhost:6542/tests/newkind-fs/${test[`newkind-fs`]}`)
+        await tests() // default demo tests
     })()
 </script>
 </html>

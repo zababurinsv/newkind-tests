@@ -2,13 +2,14 @@ import test from './modules/test/index.mjs'
 import Mocha from './modules/mocha/mocha.min.js'
 import eruda from './modules/eruda/eruda.js'
 import css from './modules/mocha/mocha.min.css.mjs'
-
+import erudaDom from 'eruda-dom'
 let mochaHtml =`<div id="tests" style="position: relative"><ul id="mocha"></ul></div><style>${css}</style>`;
 
 export let tests = async ( path = false, devTool = true ) => {
     try {
         if(devTool) {
             eruda.init()
+            eruda.add(erudaDom);
         }
         Mocha.setup('bdd');
         (path)
@@ -28,6 +29,7 @@ export let tests = async ( path = false, devTool = true ) => {
 export let devTool = async () => {
     try {
         eruda.init()
+        eruda.add(erudaDom);
         return {
             success: true,
             status: "true",
