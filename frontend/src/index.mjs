@@ -7,13 +7,17 @@ let mochaHtml =`<div id="tests" style="position: relative"><ul id="mocha"></ul><
 
 export let tests = async ( path = false, devTool = true ) => {
     try {
+       let url = (location.hostname === "localhost")
+            ? `http://localhost:6542/tests${path}`
+            : `https://zababurinsv.github.io/tests${path}`
+
         if(devTool) {
             eruda.init()
             eruda.add(erudaDom);
         }
         Mocha.setup('bdd');
         (path)
-            ? await test(path)
+            ? await test(url)
             : await test()
         document.body.insertAdjacentHTML('beforeend', mochaHtml)
         Mocha.run()

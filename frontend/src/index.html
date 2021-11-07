@@ -11,6 +11,7 @@
     (async ()=>{
         let test = await list()
         await tests() // default demo tests
+        await tests(`/newkind-fs/${test[`newkind-fs`]}`)
     })()
 </script>
 </html>
