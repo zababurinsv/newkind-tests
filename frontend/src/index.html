@@ -10,6 +10,7 @@
     import { tests, list, devTool } from './index.mjs'
     (async ()=>{
         let test = await list()
+        devTool()
         await tests()
         await tests(`/newkind-fs/${test[`newkind-fs`]}`)
     })()

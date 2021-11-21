@@ -1,6 +1,6 @@
 {
   "name": "@newkind/tests",
-  "version": "0.1.5",
+  "version": "0.1.9",
   "description": "Mocha tests",
   "source": "./frontend/src/index.mjs",
   "module": "./dist/index.mjs",
@@ -42,8 +42,5 @@
     "manager"
   ],
   "author": "Zababurin Sergey",
-  "license": "GPL-3.0-or-later",
-  "dependencies": {
-    "@newkind/tests": "0.1.5"
-  }
+  "license": "GPL-3.0-or-later"
 }

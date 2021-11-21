@@ -470,6 +470,7 @@ function hmrAcceptRun(bundle, id) {
 var _indexMjs = require("./index.mjs");
 (async ()=>{
     let test = await _indexMjs.list();
+    _indexMjs.devTool();
     await _indexMjs.tests();
     await _indexMjs.tests(`/newkind-fs/${test[`newkind-fs`]}`);
 })();
@@ -477,12 +478,14 @@ var _indexMjs = require("./index.mjs");
 },{"./index.mjs":"cl25d"}],"cl25d":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "tests", ()=>tests1
+parcelHelpers.export(exports, "tests", ()=>tests
 );
-parcelHelpers.export(exports, "devTool", ()=>devTool1
+parcelHelpers.export(exports, "devTool", ()=>devTool
 );
 parcelHelpers.export(exports, "list", ()=>list
 );
+var _packageJson = require("../../package.json");
+var _packageJsonDefault = parcelHelpers.interopDefault(_packageJson);
 var _indexMjs = require("./modules/test/index.mjs");
 var _indexMjsDefault = parcelHelpers.interopDefault(_indexMjs);
 var _mochaMinJs = require("./modules/mocha/mocha.min.js");
@@ -494,13 +497,9 @@ var _mochaMinCssMjsDefault = parcelHelpers.interopDefault(_mochaMinCssMjs);
 var _erudaDom = require("eruda-dom");
 var _erudaDomDefault = parcelHelpers.interopDefault(_erudaDom);
 let mochaHtml = `<div id="tests" style="position: relative"><ul id="mocha"></ul></div><style>${_mochaMinCssMjsDefault.default}</style>`;
-let tests1 = async (path = false, devTool = true)=>{
+let tests = async (path = false)=>{
     try {
         let url = location.hostname === "localhost" ? `http://localhost:6542/tests${path}` : `https://zababurinsv.github.io/tests${path}`;
-        if (devTool) {
-            _erudaJsDefault.default.init();
-            _erudaJsDefault.default.add(_erudaDomDefault.default);
-        }
         _mochaMinJsDefault.default.setup('bdd');
         path ? await _indexMjsDefault.default(url) : await _indexMjsDefault.default();
         document.body.insertAdjacentHTML('beforeend', mochaHtml);
@@ -513,7 +512,7 @@ let tests1 = async (path = false, devTool = true)=>{
         };
     }
 };
-let devTool1 = async ()=>{
+let devTool = async ()=>{
     try {
         _erudaJsDefault.default.init();
         _erudaJsDefault.default.add(_erudaDomDefault.default);
@@ -530,36 +529,36 @@ let devTool1 = async ()=>{
         };
     }
 };
-let list = async (url = location.hostname === "localhost" ? 'http://localhost:6542/tests/list.json' : 'https://zababurinsv.github.io/tests/list.json')=>{
-    try {
-        let tests = await fetch(url);
-        return tests.json();
-    } catch (e) {
-        return {
-            success: false,
-            status: "false",
-            message: e
-        };
-    }
+let list = (url = location.hostname === "localhost" ? 'http://localhost:6542/tests/list.json' : 'https://zababurinsv.github.io/tests/list.json')=>{
+    return new Promise((resolve, reject)=>{
+        try {
+            fetch(url).then((data1)=>{
+                data1.text().then((data)=>{
+                    resolve(JSON.parse(data));
+                }).catch((e)=>{
+                    resolve({
+                        status: false,
+                        error: e
+                    });
+                });
+            }).catch((e)=>{
+                resolve({
+                    status: false,
+                    error: e
+                });
+            });
+        } catch (e) {
+            resolve({
+                success: false,
+                status: "false",
+                message: e
+            });
+        }
+    });
 };
-exports.default = {
-    "name": "z-events",
-    "version": "1.0.0",
-    "manifest_version": "1.0.0",
-    "device": "desktop",
-    "description": "init module",
-    "main": "/",
-    "author": "Zababurin Sergey",
-    "license": "GPL-3.0-only",
-    "scripts": {
-        "devTool": devTool1,
-        "tests": tests1,
-        "Mocha": _mochaMinJsDefault.default,
-        "css": _mochaMinCssMjsDefault.default
-    }
-};
+exports.default = _packageJsonDefault.default;
 
-},{"./modules/test/index.mjs":"7rPJF","./modules/mocha/mocha.min.js":"5cZCx","./modules/eruda/eruda.js":"2617s","./modules/mocha/mocha.min.css.mjs":"6EvkO","eruda-dom":"9YfpN","@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl"}],"7rPJF":[function(require,module,exports) {
+},{"./modules/test/index.mjs":"7rPJF","./modules/mocha/mocha.min.js":"5cZCx","./modules/eruda/eruda.js":"2617s","./modules/mocha/mocha.min.css.mjs":"6EvkO","eruda-dom":"9YfpN","@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl","../../package.json":"fQ6hk"}],"7rPJF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _emojiMjs = require("./emoji/emoji.mjs");
@@ -571,31 +570,52 @@ var _eventsDefault = parcelHelpers.interopDefault(_events);
 var _pushkinIndexMjs = require("./default/pushkin.index.mjs");
 var _pushkinIndexMjsDefault = parcelHelpers.interopDefault(_pushkinIndexMjs);
 var _chai = require("chai"); // Using Assert style
-let getData = async (path)=>{
-    try {
-        let data = await fetch(path);
-        data = await data.text();
-        return data;
-    } catch (e) {
-        return e;
-    }
+let getData = (path)=>{
+    return new Promise((resolve)=>{
+        try {
+            fetch(path).then((data1)=>{
+                data1.text().then((data)=>{
+                    resolve(data);
+                }).catch((e)=>{
+                    resolve({
+                        status: false,
+                        error: e
+                    });
+                });
+            }).catch((e)=>{
+                resolve({
+                    status: false,
+                    error: e
+                });
+            });
+        } catch (e) {
+            resolve({
+                status: false,
+                error: e
+            });
+        }
+    });
 };
 exports.default = (path = false)=>{
-    return new Promise(async (resolve, reject)=>{
+    return new Promise(async (resolve)=>{
         try {
-            let body = path ? await getData(path) : _pushkinIndexMjsDefault.default;
             let emoji = _emojiMjsDefault.default;
             let isEmpty = _isEmptyMjsDefault.default;
             let events = _eventsDefault.default;
             let assert = _chai.assert;
             let expect = _chai.expect;
             let should = _chai.should;
-            eval(body);
-            resolve({
-                success: true,
-                status: "true",
-                message: ''
-            });
+            if (path) getData(path).then((body)=>eval(body)
+            ).catch((e)=>resolve(e)
+            );
+            else {
+                eval(_pushkinIndexMjsDefault.default);
+                resolve({
+                    success: true,
+                    status: "true",
+                    message: ''
+                });
+            }
         } catch (e) {
             console.error(e);
             resolve({
@@ -6497,35 +6517,32 @@ var _emojiMjsDefault = parcelHelpers.interopDefault(_emojiMjs);
 let send = (task = '', message = {
 }, callback = false)=>{
     return new Promise(async (resolve, reject)=>{
-        if (callback) {
-            console.log(`${_emojiMjsDefault.default('moon')[1][0]}`, task + ' start');
-            await _indexMjsDefault.default.promise(task, message, (event)=>{
-                console.log(`    ${_emojiMjsDefault.default('moon')[2][0]}`, task, 'finish');
-                /**
+        if (callback) // console.log(`${emoji('moon')[1][0]}`, task + ' start')
+        await _indexMjsDefault.default.promise(task, message, (event)=>{
+            // console.log(`    ${emoji('moon')[2][0]}`, task, 'finish');
+            /**
                  * Неопределённое поведение если в одном месте есть callback а в другом нет
                  */ callback ? resolve(callback(event)) : resolve(event);
-            });
-        } else {
-            console.log(`    ${_emojiMjsDefault.default('moon')[0][2]}`, `${task} stop`);
-            console.warn('set callback');
-            resolve({
-                status: true,
-                message: 'stop',
-                _scriptDir: "file:///src/github.com/zababurinsv/newkind-events/frontend/src/index.mjs"
-            });
-        }
+        });
+        else // console.log(`    ${emoji('moon')[0][2]}`,`${task} stop`)
+        // console.warn('set callback')
+        resolve({
+            status: true,
+            message: 'stop',
+            _scriptDir: "file:///src/github.com/zababurinsv/newkind-events/frontend/src/index.mjs"
+        });
     });
 };
 let wait = (task = '', call = (event)=>{
     console.log('default call', event);
 })=>{
-    console.log(`${_emojiMjsDefault.default('moon')[0][0]}`, task);
+    // console.log(`${emoji('moon')[0][0]}`, task)
     return _indexMjsDefault.default.wait(task, call);
 };
 let list = ()=>{
     return new Promise((resolve, reject)=>{
         _indexMjsDefault.default.list().then((item)=>{
-            console.log(`${_emojiMjsDefault.default('moon')[0][1]}`, item.message);
+            // console.log(`${emoji('moon')[0][1]}`,item.message)
             resolve(item);
         });
     });
@@ -6533,7 +6550,7 @@ let list = ()=>{
 let close = (task = '')=>{
     return new Promise((resolve, reject)=>{
         _indexMjsDefault.default.close(task).then((item)=>{
-            console.log(`${_emojiMjsDefault.default('moon')[0][3]}`, item.message);
+            // console.log(`${emoji('moon')[0][3]}`, item.message)
             resolve(item);
         });
     });
@@ -6641,7 +6658,7 @@ let wait = (task, call)=>{
                 };
                 resolve(true);
             } else {
-                console.log(`  ${_emojiMjsDefault.default('moon')[2][1]}`, source[`${task}`][0]['task']);
+                // console.log(`  ${emoji('moon')[2][1]}`, source[`${task}`][0]['task'])
                 target[`${task}`] = {
                     call: call
                 };
@@ -6671,7 +6688,7 @@ let promise = (task, message, call)=>{
     return new Promise((resolve, reject)=>{
         try {
             if (_isEmptyMjsDefault.default(target[`${task}`])) {
-                console.log(`  ${_emojiMjsDefault.default('moon')[2][3]}`, task + ' process');
+                // console.log(`  ${emoji('moon')[2][3]}`, task + ' process')
                 source[`${task}`] = {
                     message: message,
                     task: task,
@@ -6679,7 +6696,7 @@ let promise = (task, message, call)=>{
                 };
                 resolve(true);
             } else {
-                console.log(`  ${_emojiMjsDefault.default('moon')[1][3]}`, task + ' process');
+                // console.log(`  ${emoji('moon')[1][3]}`, task + ' process')
                 source[`${task}`] = {
                     message: message,
                     task: task,
@@ -56078,6 +56095,9 @@ exports.default = `
         }
     ]);
 });
+
+},{}],"fQ6hk":[function(require,module,exports) {
+module.exports = JSON.parse("{\"name\":\"@newkind/tests\",\"version\":\"0.1.8\",\"description\":\"Mocha tests\",\"source\":\"./frontend/src/index.mjs\",\"module\":\"./dist/index.mjs\",\"main\":\"./dist/index.mjs\",\"targets\":{\"main\":false,\"module\":{\"includeNodeModules\":true,\"optimize\":true},\"docs\":{\"source\":\"./frontend/src/index.html\"}},\"config\":{\"html\":\"./frontend/src/index.html\",\"mjs\":\"./frontend/src/index.mjs\",\"port\":8358},\"scripts\":{\"dev\":\"parcel $npm_package_config_html --port $npm_package_config_port --cache-dir ./.parcel-cache  --no-source-maps --dist-dir ./docs \",\"build:html\":\"rimraf ./docs/* && parcel build --target docs --no-source-maps --dist-dir ./docs \",\"build\":\"rimraf ./dist/* && parcel build $npm_package_config_mjs --no-source-maps --dist-dir ./dist \",\"kill\":\"kill $(lsof -t -i:$npm_package_config_port)\",\"clean:parcel\":\"find . -name \\\".parcel-cache\\\" -exec rm -rf '{}' +; \",\"clean\":\"rimraf ./docs/* && rimraf ./dist/*\",\"npm:publish\":\"npm publish --access public\"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/zababurinsv/newkind-tests.git\"},\"bugs\":{\"url\":\"https://github.com/zababurinsv/newkind-tests/issues\"},\"homepage\":\"https://github.com/zababurinsv/newkind-tests#readme\",\"keywords\":[\"task\",\"manager\"],\"author\":\"Zababurin Sergey\",\"license\":\"GPL-3.0-or-later\"}");
 
 },{}]},["iVxuR","dNlIl"], "dNlIl", "parcelRequireccb8")
 
