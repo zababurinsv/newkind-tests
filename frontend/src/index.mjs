@@ -15,7 +15,9 @@ export let tests = async ( path = '', custom = false) => {
         (path)
             ? await test((custom) ? path: url)
             : await test()
+        console.log('#########333##############')
         document.body.insertAdjacentHTML('beforeend', mochaHtml)
+        Mocha.checkLeaks();
         Mocha.run()
     } catch (e) {
         return {

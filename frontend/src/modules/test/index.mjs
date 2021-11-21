@@ -30,7 +30,14 @@ export default ( path = false ) => {
           let expect = Expect
           let should = Should
           if(path) {
-              getData(path).then(body => eval(body)).catch(e => resolve(e))
+              getData(path).then(body => {
+                  eval(body)
+                  resolve({
+                      success: true,
+                      status: "true",
+                      message: ''
+                  })
+              }).catch(e => resolve(e))
           } else {
               eval(pushkin)
               resolve({

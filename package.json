@@ -1,6 +1,6 @@
 {
   "name": "@newkind/tests",
-  "version": "0.1.9",
+  "version": "0.2.1",
   "description": "Mocha tests",
   "source": "./frontend/src/index.mjs",
   "module": "./dist/index.mjs",
@@ -42,5 +42,10 @@
     "manager"
   ],
   "author": "Zababurin Sergey",
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@newkind/events": "^0.2.8",
+    "chai": "^4.3.4",
+    "eruda-dom": "^2.0.0"
+  }
 }
