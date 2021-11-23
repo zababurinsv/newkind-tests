@@ -27,7 +27,6 @@ export default ( path = false ) => {
           let assert = Assert
           let expect = Expect
           let should = Should
-          console.log('~~~~~~~~~~~~~~~~~~~~')
           if(path) {
               getData(path).then(body => {
                   eval(body)
