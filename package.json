@@ -1,6 +1,6 @@
 {
   "name": "@newkind/tests",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Mocha tests",
   "source": "./frontend/src/index.mjs",
   "module": "./dist/index.mjs",
