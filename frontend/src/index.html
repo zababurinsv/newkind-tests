@@ -8,10 +8,13 @@
 <body></body>
 <script type="module">
     import { tests, list, devTool } from './index.mjs'
-    (async ()=>{
-        let test = await list()
-        await tests()
-        await tests(`/newkind-fs/${test[`newkind-fs`]}`)
+    (async () => {
+        tests().catch(e => {console.log('error devtool', e)})
+        // tests('./tests/service.tests.mjs', true).catch(e => {console.log('error devtool', e)})
+        // await devTool()
+        // console.log(await list())
+        // await tests()
+        // await tests(`/newkind-fs/${test[`newkind-fs`]}`)
     })()
 </script>
 </html>

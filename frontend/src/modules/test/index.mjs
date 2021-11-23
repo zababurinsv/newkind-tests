@@ -1,4 +1,3 @@
-import Emoji from './emoji/emoji.mjs';
 import IsEmpty from './isEmpty/isEmpty.mjs'
 import Events from '@newkind/events'
 import pushkin from './default/pushkin.index.mjs'
@@ -23,12 +22,12 @@ let getData = (path) => {
 export default ( path = false ) => {
   return new Promise(async resolve => {
       try {
-          let emoji =  Emoji
-          let isEmpty =IsEmpty
+          let isEmpty = IsEmpty
           let events = Events
           let assert = Assert
           let expect = Expect
           let should = Should
+          console.log('~~~~~~~~~~~~~~~~~~~~')
           if(path) {
               getData(path).then(body => {
                   eval(body)
