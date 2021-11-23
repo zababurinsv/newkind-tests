@@ -1,6 +1,6 @@
 import pkg from '../../package.json'
 import test from './modules/test/index.mjs'
-import Mocha from 'mocha'
+import Mocha from './modules/mocha/mocha-es2018.js'
 import eruda from './modules/eruda/eruda.js'
 import css from './modules/mocha/mocha.min.css.mjs'
 import erudaDom from 'eruda-dom'
