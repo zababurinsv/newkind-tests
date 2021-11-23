@@ -1,6 +1,6 @@
 {
   "name": "@newkind/tests",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Mocha tests",
   "source": "./frontend/src/index.mjs",
   "module": "./dist/index.mjs",
@@ -35,8 +35,8 @@
     "port_dev": 4548
   },
   "staticFiles": {
-    "staticPath": "./frontend/src/static",
-    "distDir": "./service"
+    "staticPath": "frontend/src/static",
+    "distDir": "service"
   },
   "scripts": {
     "dev": "rimraf ./service/* && parcel --cache-dir ./.parcel-cache --no-hmr --port $npm_package_config_port_dev --dist-dir service --target dev",
