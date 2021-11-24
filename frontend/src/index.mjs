@@ -6,21 +6,17 @@ import css from './modules/mocha/mocha.min.css.mjs'
 import erudaDom from 'eruda-dom'
 let mochaHtml =`<div id="tests" style="position: relative"><ul id="mocha"></ul></div><style>${css}</style>`;
 
-export let tests = ( path = false, custom = false) => {
+export let tests = ( path = false, checkLeaks = true) => {
     return new Promise(async (resolve, reject) => {
         try {
-            let url = (location.hostname === "localhost")
-                ? `http://localhost:6542/tests${path}`
-                : `https://zababurinsv.github.io/tests${path}`
-
-            console.log('Mocha', Mocha)
             Mocha.setup('bdd');
-
             (path)
-                ? await test((custom) ? path: url)
+                ? await test(path)
                 : await test()
-            document.body.insertAdjacentHTML('beforeend', mochaHtml)
-            Mocha.checkLeaks();
+            document.body.insertAdjacentHTML('beforeend', mochaHtml);
+            (checkLeaks)
+                ? Mocha.checkLeaks()
+                : Mocha.setup({ignoreLeaks: true})
             Mocha.run()
             resolve(true)
         } catch (e) {

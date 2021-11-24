@@ -10,7 +10,7 @@
     import { tests, list, devTool } from './index.mjs'
     (async () => {
         await devTool()
-        tests('./tests/service.tests.mjs', true).catch(e => {console.log('error devtool', e)})
+        tests('http://localhost:4548/tests/service.tests.mjs').catch(e => {console.log('error devtool', e)})
         // tests().catch(e => {console.log('error devtool', e)})
         // tests('./tests/service.tests.mjs', true).catch(e => {console.log('error devtool', e)})
 

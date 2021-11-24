@@ -6,308 +6,98 @@
     <link rel="shortcut icon" href="data:image/png;base64, AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbbv+DGW3/mRlt/5kZbf+ZGq6/hIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGa3/ohkt/7/Zbj//2S3/v9lt/6WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGm5/iRlt/74Zbj//2W4//9luP//Zbf++mi4/i4gIPciGhr24hsb9uwbG/bsGhr24CEh9xoAAAAAAAAAAAAAAABnuP5mZLf+/2W4//9luP//Zbj//2S3/v9muP5yGBj2rhMT9v8TE/b/ExP2/xMT9f8YGPWkAAAAAAAAAAAAAAAAb7z/BGW3/tZluP//Zbj//2W4//9lt/7gJzH3ShMT9f8TE/b/ExP2/xMT9v8TE/b/ExP1/CAg9joAAAAAAAAAAAAAAABmuP5GZLf+6GS3/uhkt/7oZbf+UhgY9YQSEvX/ExP2/xMT9v8TE/b/ExP2/xIS9f8aGvZ8AAAAAD4++gQgIPZ6IiL2hiIi9oYgIPZ8KCj5BAAAAAAtLfgUFBT17BMT9v8TE/b/ExP2/xMT9v8VFfXoLCz4DgAAAAAaGvZqEhL1/xMT9v8TE/b/EhL1/xsb9nIAAAAAAAAAABwc9m4SEvX/ExP2/xMT9v8SEvX/HR32ZAAAAAAnJ/gSFRX16hMT9v8TE/b/ExP2/xMT9v8UFPXuJyf4Fp2xlAKNnqUYLC/mfhYW83ATE/VuFxf1aDc3+gIAAAAAGBj1fhIS9f8TE/b/ExP2/xMT9v8TE/b/ExP1/xkZ9YaGn3yIhZ57/4Wee/+Gn3yKAAAAAAAAAAAAAAAAAAAAACMj9zYTE/X8ExP2/xMT9v8TE/b/ExP2/xMT9f9JUshihZ57+IaffP+Gn3z/hZ579oigfiYAAAAAAAAAAAAAAAAAAAAAGBj1oBIS9f8TE/b/ExP2/xMT9f8YGPWmiKB+PIWee/+Gn3z/hp98/4Wee/+HoH06AAAAAAAAAAAAAAAAAAAAACUl9xgVFfXOExP11BMT9dQUFPXQJib3HgAAAACGn3ymhp98/4affP+Gn3ymAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiKB+EIihf0CIoX9AiKB+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AADg/wAA4MMAAOCBAADggQAA8QEAAOeBAADDwwAAgf8AAIAPAACBDwAAgQ8AAMMPAAD//wAA//8AAA==" type="image/png">
 </head>
 <body></body>
-<script>// modules are defined as an array
-// [ module function, map of requires ]
-//
-// map of requires is short require name -> numeric require
-//
-// anything defined in a previous bundle is accessed via the
-// orig method which is the require for previous bundles
+<script type="module">function $parcel$interopDefault(a) {
+  return a && a.__esModule ? a.default : a;
+}
+function $parcel$export(e, n, v, s) {
+  Object.defineProperty(e, n, {get: v, set: s, enumerable: true, configurable: true});
+}
+var $parcel$global =
+typeof globalThis !== 'undefined'
+  ? globalThis
+  : typeof self !== 'undefined'
+  ? self
+  : typeof window !== 'undefined'
+  ? window
+  : typeof global !== 'undefined'
+  ? global
+  : {};
+var $parcel$modules = {};
+var $parcel$inits = {};
 
-(function (modules, entry, mainEntry, parcelRequireName, globalName) {
-  /* eslint-disable no-undef */
-  var globalObject =
-    typeof globalThis !== 'undefined'
-      ? globalThis
-      : typeof self !== 'undefined'
-      ? self
-      : typeof window !== 'undefined'
-      ? window
-      : typeof global !== 'undefined'
-      ? global
-      : {};
-  /* eslint-enable no-undef */
-
-  // Save the require from previous bundle to this closure if any
-  var previousRequire =
-    typeof globalObject[parcelRequireName] === 'function' &&
-    globalObject[parcelRequireName];
-
-  var cache = previousRequire.cache || {};
-  // Do not use `require` to prevent Webpack from trying to bundle this call
-  var nodeRequire =
-    typeof module !== 'undefined' &&
-    typeof module.require === 'function' &&
-    module.require.bind(module);
-
-  function newRequire(name, jumped) {
-    if (!cache[name]) {
-      if (!modules[name]) {
-        // if we cannot find the module within our internal map or
-        // cache jump to the current global require ie. the last bundle
-        // that was added to the page.
-        var currentRequire =
-          typeof globalObject[parcelRequireName] === 'function' &&
-          globalObject[parcelRequireName];
-        if (!jumped && currentRequire) {
-          return currentRequire(name, true);
-        }
-
-        // If there are other bundles on this page the require from the
-        // previous one is saved to 'previousRequire'. Repeat this as
-        // many times as there are bundles until the module is found or
-        // we exhaust the require chain.
-        if (previousRequire) {
-          return previousRequire(name, true);
-        }
-
-        // Try the node require function if it exists.
-        if (nodeRequire && typeof name === 'string') {
-          return nodeRequire(name);
-        }
-
-        var err = new Error("Cannot find module '" + name + "'");
-        err.code = 'MODULE_NOT_FOUND';
-        throw err;
-      }
-
-      localRequire.resolve = resolve;
-      localRequire.cache = {};
-
-      var module = (cache[name] = new newRequire.Module(name));
-
-      modules[name][0].call(
-        module.exports,
-        localRequire,
-        module,
-        module.exports,
-        this
-      );
+var parcelRequire = $parcel$global["parcelRequire1eac"];
+if (parcelRequire == null) {
+  parcelRequire = function(id) {
+    if (id in $parcel$modules) {
+      return $parcel$modules[id].exports;
     }
-
-    return cache[name].exports;
-
-    function localRequire(x) {
-      return newRequire(localRequire.resolve(x));
+    if (id in $parcel$inits) {
+      var init = $parcel$inits[id];
+      delete $parcel$inits[id];
+      var module = {id: id, exports: {}};
+      $parcel$modules[id] = module;
+      init.call(module.exports, module, module.exports);
+      return module.exports;
     }
-
-    function resolve(x) {
-      return modules[name][1][x] || x;
-    }
-  }
-
-  function Module(moduleName) {
-    this.id = moduleName;
-    this.bundle = newRequire;
-    this.exports = {};
-  }
-
-  newRequire.isParcelRequire = true;
-  newRequire.Module = Module;
-  newRequire.modules = modules;
-  newRequire.cache = cache;
-  newRequire.parent = previousRequire;
-  newRequire.register = function (id, exports) {
-    modules[id] = [
-      function (require, module) {
-        module.exports = exports;
-      },
-      {},
-    ];
+    var err = new Error("Cannot find module '" + id + "'");
+    err.code = 'MODULE_NOT_FOUND';
+    throw err;
   };
 
-  Object.defineProperty(newRequire, 'root', {
-    get: function () {
-      return globalObject[parcelRequireName];
-    },
-  });
+  parcelRequire.register = function register(id, init) {
+    $parcel$inits[id] = init;
+  };
 
-  globalObject[parcelRequireName] = newRequire;
+  $parcel$global["parcelRequire1eac"] = parcelRequire;
+}
+var $0b047f38911a2ae2$exports = {};
+$0b047f38911a2ae2$exports = JSON.parse("{\"name\":\"@newkind/tests\",\"version\":\"0.2.6\",\"description\":\"Mocha tests\",\"source\":\"./frontend/src/index.mjs\",\"module\":\"./dist/index.mjs\",\"main\":\"./dist/index.mjs\",\"targets\":{\"main\":false,\"dev\":{\"includeNodeModules\":true,\"optimize\":true,\"sourceMap\":true,\"scopeHoist\":true,\"isLibrary\":true,\"source\":\"./frontend/src/index.html\"},\"module\":{\"includeNodeModules\":true,\"optimize\":true,\"isLibrary\":true,\"sourceMap\":false,\"source\":\"./frontend/src/index.mjs\"},\"service\":{\"includeNodeModules\":true,\"optimize\":false,\"isLibrary\":false,\"sourceMap\":false,\"distDir\":\"service\",\"source\":\"./frontend/src/index.html\"}},\"config\":{\"port_dev\":4548},\"staticFiles\":{\"staticPath\":\"frontend/src/static\",\"distDir\":\"service\"},\"scripts\":{\"dev\":\"rimraf ./service/* && parcel --cache-dir ./.parcel-cache --no-hmr --port $npm_package_config_port_dev --dist-dir service --target dev\",\"module\":\"rimraf ./dist/* && parcel build --target module\",\"sevice\":\"rimraf ./service/* && rimraf .parcel-cache && parcel build --target service\",\"deploy\":\"gh-pages -d service\",\"clean:cache\":\"find . -name \\\".parcel-cache\\\" -exec rm -rf '{}' +; \"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/zababurinsv/newkind-tests.git\"},\"bugs\":{\"url\":\"https://github.com/zababurinsv/newkind-tests/issues\"},\"homepage\":\"https://github.com/zababurinsv/newkind-tests#readme\",\"keywords\":[\"task\",\"manager\"],\"author\":\"Zababurin Sergey\",\"license\":\"GPL-3.0-or-later\",\"dependencies\":{\"@newkind/events\":\"^0.2.8\",\"chai\":\"^4.3.4\",\"eruda-dom\":\"^2.0.0\",\"mocha\":\"^9.1.3\"},\"devDependencies\":{\"@parcel/packager-raw-url\":\"^2.0.1\",\"@parcel/transformer-sass\":\"^2.0.1\",\"@parcel/transformer-webmanifest\":\"^2.0.1\",\"@types/libsodium-wrappers\":\"^0.7.9\",\"docdash\":\"^1.2.0\",\"gh-pages\":\"^3.2.3\",\"jsdoc\":\"^3.6.7\",\"jsdoc-to-markdown\":\"^7.1.0\",\"parcel\":\"2.0.1\",\"parcel-reporter-static-files-copy\":\"^1.3.1\",\"postcss\":\"^8.4.1\",\"redrun\":\"^9.0.1\",\"redux\":\"^4.1.2\"}}");
 
-  for (var i = 0; i < entry.length; i++) {
-    newRequire(entry[i]);
-  }
 
-  if (mainEntry) {
-    // Expose entry point to Node, AMD or browser globals
-    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
-    var mainExports = newRequire(mainEntry);
+parcelRequire.register("8Kzcj", function(module, exports) {
 
-    // CommonJS
-    if (typeof exports === 'object' && typeof module !== 'undefined') {
-      module.exports = mainExports;
+$parcel$export(module.exports, "default", () => $4cbe32bf46bc237b$export$2e2bcd8739ae039);
 
-      // RequireJS
-    } else if (typeof define === 'function' && define.amd) {
-      define(function () {
-        return mainExports;
-      });
+var $gtO5D = parcelRequire("gtO5D");
 
-      // <script>
-    } else if (globalName) {
-      this[globalName] = mainExports;
-    }
-  }
-})({"lA64e":[function(require,module,exports) {
-var _indexMjs = require("./index.mjs");
-(async ()=>{
-    await _indexMjs.devTool();
-    _indexMjs.tests('./tests/service.tests.mjs', true).catch((e)=>{
-        console.log('error devtool', e);
-    });
-// tests().catch(e => {console.log('error devtool', e)})
-// tests('./tests/service.tests.mjs', true).catch(e => {console.log('error devtool', e)})
-// console.log(await list())
-// await tests()
-// await tests(`/newkind-fs/${test[`newkind-fs`]}`)
-})();
+var $3qkI7 = parcelRequire("3qkI7");
 
-},{"./index.mjs":"3jqKr"}],"3jqKr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "tests", ()=>tests
-);
-parcelHelpers.export(exports, "devTool", ()=>devTool
-);
-parcelHelpers.export(exports, "list", ()=>list
-);
-var _packageJson = require("../../package.json");
-var _packageJsonDefault = parcelHelpers.interopDefault(_packageJson);
-var _indexMjs = require("./modules/test/index.mjs");
-var _indexMjsDefault = parcelHelpers.interopDefault(_indexMjs);
-var _mochaEs2018Js = require("./modules/mocha/mocha-es2018.js");
-var _mochaEs2018JsDefault = parcelHelpers.interopDefault(_mochaEs2018Js);
-var _erudaJs = require("./modules/eruda/eruda.js");
-var _erudaJsDefault = parcelHelpers.interopDefault(_erudaJs);
-var _mochaMinCssMjs = require("./modules/mocha/mocha.min.css.mjs");
-var _mochaMinCssMjsDefault = parcelHelpers.interopDefault(_mochaMinCssMjs);
-var _erudaDom = require("eruda-dom");
-var _erudaDomDefault = parcelHelpers.interopDefault(_erudaDom);
-let mochaHtml = `<div id="tests" style="position: relative"><ul id="mocha"></ul></div><style>${_mochaMinCssMjsDefault.default}</style>`;
-let tests = (path = false, custom = false)=>{
+var $ibQm2 = parcelRequire("ibQm2");
+
+var $cY47G = parcelRequire("cY47G");
+
+var $cY47G = parcelRequire("cY47G");
+
+var $cY47G = parcelRequire("cY47G");
+var $4cbe32bf46bc237b$export$2e2bcd8739ae039 = (url = false)=>{
     return new Promise(async (resolve, reject)=>{
         try {
-            let url = location.hostname === "localhost" ? `http://localhost:6542/tests${path}` : `https://zababurinsv.github.io/tests${path}`;
-            console.log('Mocha', _mochaEs2018JsDefault.default);
-            _mochaEs2018JsDefault.default.setup('bdd');
-            path ? await _indexMjsDefault.default(custom ? path : url) : await _indexMjsDefault.default();
-            document.body.insertAdjacentHTML('beforeend', mochaHtml);
-            _mochaEs2018JsDefault.default.checkLeaks();
-            _mochaEs2018JsDefault.default.run();
-            resolve(true);
-        } catch (e) {
-            reject({
-                success: false,
-                status: "false",
-                message: e
-            });
-        }
-    });
-};
-let devTool = async ()=>{
-    try {
-        _erudaJsDefault.default.init();
-        _erudaJsDefault.default.add(_erudaDomDefault.default);
-        return {
-            success: true,
-            status: "true",
-            message: ''
-        };
-    } catch (e) {
-        return {
-            success: false,
-            status: "false",
-            message: e
-        };
-    }
-};
-let list = (url = location.hostname === "localhost" ? 'http://localhost:6542/tests/list.json' : 'https://zababurinsv.github.io/tests/list.json')=>{
-    return new Promise((resolve, reject)=>{
-        try {
-            fetch(url).then((data1)=>{
-                data1.text().then((data)=>{
-                    resolve(JSON.parse(data));
-                }).catch((e)=>{
+            if (url) {
+                window['@newkind/tests'] = {
+                    assert: $cY47G.assert,
+                    expect: $cY47G.expect,
+                    should: $cY47G.should,
+                    events: $3qkI7.default,
+                    isEmpty: $gtO5D.default
+                };
+                let script = document.createElement('script');
+                script.type = 'module';
+                script.src = `${url}`;
+                document.body.appendChild(script);
+                script.onload = ()=>{
+                    console.log('load test');
                     resolve({
-                        status: false,
-                        error: e
+                        success: true,
+                        status: "true",
+                        message: ''
                     });
-                });
-            }).catch((e)=>{
-                resolve({
-                    status: false,
-                    error: e
-                });
-            });
-        } catch (e) {
-            resolve({
-                success: false,
-                status: "false",
-                message: e
-            });
-        }
-    });
-};
-exports.default = _packageJsonDefault.default;
-
-},{"../../package.json":"5j3YT","./modules/test/index.mjs":"cyPIb","./modules/mocha/mocha-es2018.js":"4h6S5","./modules/eruda/eruda.js":"8vUaJ","./modules/mocha/mocha.min.css.mjs":"8VWxN","eruda-dom":"9YfpN","@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl"}],"5j3YT":[function(require,module,exports) {
-module.exports = JSON.parse("{\"name\":\"@newkind/tests\",\"version\":\"0.2.5\",\"description\":\"Mocha tests\",\"source\":\"./frontend/src/index.mjs\",\"module\":\"./dist/index.mjs\",\"main\":\"./dist/index.mjs\",\"targets\":{\"main\":false,\"dev\":{\"includeNodeModules\":true,\"optimize\":true,\"sourceMap\":false,\"scopeHoist\":true,\"isLibrary\":false,\"source\":\"./frontend/src/index.html\"},\"module\":{\"includeNodeModules\":true,\"optimize\":true,\"isLibrary\":true,\"sourceMap\":false,\"source\":\"./frontend/src/index.mjs\"},\"service\":{\"includeNodeModules\":true,\"optimize\":false,\"isLibrary\":false,\"sourceMap\":false,\"distDir\":\"service\",\"source\":\"./frontend/src/index.html\"}},\"config\":{\"port_dev\":4548},\"staticFiles\":{\"staticPath\":\"frontend/src/static\",\"distDir\":\"service\"},\"scripts\":{\"dev\":\"rimraf ./service/* && parcel --cache-dir ./.parcel-cache --no-hmr --port $npm_package_config_port_dev --dist-dir service --target dev\",\"module\":\"rimraf ./dist/* && parcel build --target module\",\"sevice\":\"rimraf ./service/* && rimraf .parcel-cache && parcel build --target service\",\"deploy\":\"gh-pages -d service\",\"clean:cache\":\"find . -name \\\".parcel-cache\\\" -exec rm -rf '{}' +; \"},\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/zababurinsv/newkind-tests.git\"},\"bugs\":{\"url\":\"https://github.com/zababurinsv/newkind-tests/issues\"},\"homepage\":\"https://github.com/zababurinsv/newkind-tests#readme\",\"keywords\":[\"task\",\"manager\"],\"author\":\"Zababurin Sergey\",\"license\":\"GPL-3.0-or-later\",\"dependencies\":{\"@newkind/events\":\"^0.2.8\",\"chai\":\"^4.3.4\",\"eruda-dom\":\"^2.0.0\",\"mocha\":\"^9.1.3\"},\"devDependencies\":{\"@newkind/tests\":\"^0.2.2\",\"@parcel/packager-raw-url\":\"^2.0.1\",\"@parcel/transformer-sass\":\"^2.0.1\",\"@parcel/transformer-webmanifest\":\"^2.0.1\",\"@types/libsodium-wrappers\":\"^0.7.9\",\"docdash\":\"^1.2.0\",\"gh-pages\":\"^3.2.3\",\"jsdoc\":\"^3.6.7\",\"jsdoc-to-markdown\":\"^7.1.0\",\"parcel\":\"2.0.1\",\"parcel-reporter-static-files-copy\":\"^1.3.1\",\"postcss\":\"^8.3.11\",\"redrun\":\"^9.0.1\",\"redux\":\"^4.1.2\"}}");
-
-},{}],"cyPIb":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _isEmptyMjs = require("./isEmpty/isEmpty.mjs");
-var _isEmptyMjsDefault = parcelHelpers.interopDefault(_isEmptyMjs);
-var _events = require("@newkind/events");
-var _eventsDefault = parcelHelpers.interopDefault(_events);
-var _pushkinIndexMjs = require("./default/pushkin.index.mjs");
-var _pushkinIndexMjsDefault = parcelHelpers.interopDefault(_pushkinIndexMjs);
-var _chai = require("chai"); // Using Assert style
-let getData = (path)=>{
-    return new Promise((resolve)=>{
-        try {
-            fetch(path).then((data1)=>{
-                data1.text().then((data)=>{
-                    resolve(data);
-                }).catch((e)=>{
-                    resolve({
-                        status: false,
-                        error: e
-                    });
-                });
-            }).catch((e)=>{
-                resolve({
-                    status: false,
-                    error: e
-                });
-            });
-        } catch (e) {
-            resolve({
-                status: false,
-                error: e
-            });
-        }
-    });
-};
-exports.default = (path = false)=>{
-    return new Promise(async (resolve)=>{
-        try {
-            let isEmpty = _isEmptyMjsDefault.default;
-            let events = _eventsDefault.default;
-            let assert = _chai.assert;
-            let expect = _chai.expect;
-            let should = _chai.should;
-            if (path) getData(path).then((body)=>{
-                eval(body);
-                resolve({
-                    success: true,
-                    status: "true",
-                    message: ''
-                });
-            }).catch((e)=>resolve(e)
-            );
-            else {
-                eval(_pushkinIndexMjsDefault.default);
+                };
+                script.onerror = function(e) {
+                    alert("Error loading " + this.src);
+                    reject(e);
+                };
+            } else {
+                eval($ibQm2.default);
                 resolve({
                     success: true,
                     status: "true",
@@ -325,12 +115,13 @@ exports.default = (path = false)=>{
     });
 };
 
-},{"./isEmpty/isEmpty.mjs":"9eBsv","@newkind/events":"iBPQz","./default/pushkin.index.mjs":"6rPJz","chai":"cuOg2","@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl"}],"9eBsv":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-let has = Object.prototype.hasOwnProperty;
-let toString = Object.prototype.toString;
-function isEmpty(val) {
+});
+parcelRequire.register("gtO5D", function(module, exports) {
+
+$parcel$export(module.exports, "default", () => $0840a318974abdc0$export$2e2bcd8739ae039);
+let $0840a318974abdc0$var$has = Object.prototype.hasOwnProperty;
+let $0840a318974abdc0$var$toString = Object.prototype.toString;
+function $0840a318974abdc0$var$isEmpty(val) {
     // Null and Undefined...
     if (val == null) return true;
     // Booleans...
@@ -350,7 +141,7 @@ function isEmpty(val) {
     // Errors...
     if (val instanceof Error) return val.message === '';
     // Objects...
-    if (val.toString == toString) switch(val.toString()){
+    if (val.toString == $0840a318974abdc0$var$toString) switch(val.toString()){
         // Maps, Sets, Files and Errors...
         case '[object File]':
         case '[object Map]':
@@ -359,52 +150,22 @@ function isEmpty(val) {
         // Plain objects...
         case '[object Object]':
             for(var key in val){
-                if (has.call(val, key)) return false;
+                if ($0840a318974abdc0$var$has.call(val, key)) return false;
             }
             return true;
     }
     // Anything else...
     return false;
 }
-exports.default = isEmpty;
+var $0840a318974abdc0$export$2e2bcd8739ae039 = $0840a318974abdc0$var$isEmpty;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl"}],"8FsVl":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
+});
 
-},{}],"iBPQz":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>l
-);
-let e1 = Object.prototype.hasOwnProperty, m2 = Object.prototype.toString;
-var a1 = function(a) {
+parcelRequire.register("3qkI7", function(module, exports) {
+
+$parcel$export(module.exports, "default", () => $2a3645592e2d8803$export$2e2bcd8739ae039);
+let $2a3645592e2d8803$var$e = Object.prototype.hasOwnProperty, $2a3645592e2d8803$var$m = Object.prototype.toString;
+var $2a3645592e2d8803$var$a = function(a) {
     if (null == a) return !0;
     if ("boolean" == typeof a) return !1;
     if ("number" == typeof a) return 0 === a;
@@ -412,18 +173,18 @@ var a1 = function(a) {
     if ("function" == typeof a) return 0 === a.length;
     if (Array.isArray(a)) return a instanceof Object ? 0 === Object.keys(a).length : 0 === a.length;
     if (a instanceof Error) return "" === a.message;
-    if (a.toString == m2) switch(a.toString()){
+    if (a.toString == $2a3645592e2d8803$var$m) switch(a.toString()){
         case "[object File]":
         case "[object Map]":
         case "[object Set]":
             return 0 === a.size;
         case "[object Object]":
-            for(var o in a)if (e1.call(a, o)) return !1;
+            for(var o in a)if ($2a3645592e2d8803$var$e.call(a, o)) return !1;
             return !0;
     }
     return !1;
 };
-const o1 = [
+const $2a3645592e2d8803$var$o = [
     {
         emoji: "💯",
         name: "100"
@@ -6153,37 +5914,37 @@ const o1 = [
         name: "zimbabwe"
     }
 ];
-o1.forEach(({ emoji: e , name: m  })=>{
+$2a3645592e2d8803$var$o.forEach(({ emoji: e , name: m  })=>{
     console[m] = console.log.bind(console, `${e} `);
 });
-let n = {
-}, i = {
-}, j = {
+let $2a3645592e2d8803$var$n = {
+}, $2a3645592e2d8803$var$i = {
+}, $2a3645592e2d8803$var$j = {
 };
-j = {
-}, n = {
-}, i = {
-}, j = {
-}, i = new Proxy({
+$2a3645592e2d8803$var$j = {
+}, $2a3645592e2d8803$var$n = {
+}, $2a3645592e2d8803$var$i = {
+}, $2a3645592e2d8803$var$j = {
+}, $2a3645592e2d8803$var$i = new Proxy({
 }, {
     get: (e, m)=>e[m]
     ,
-    set: (e, m, o)=>(a1(e[m]) && (e[m] = []), e[m].push(o), !0)
-}), n = new Proxy({
+    set: (e, m, o)=>($2a3645592e2d8803$var$a(e[m]) && (e[m] = []), e[m].push(o), !0)
+}), $2a3645592e2d8803$var$n = new Proxy({
 }, {
     get: (e, m)=>e[m]
     ,
-    set: (e, m, o)=>(a1(e[m]) && (e[m] = []), e[m].push(o), !0)
+    set: (e, m, o)=>($2a3645592e2d8803$var$a(e[m]) && (e[m] = []), e[m].push(o), !0)
 });
-var r1 = ()=>new Promise((e, m)=>{
+var $2a3645592e2d8803$var$r = ()=>new Promise((e, m)=>{
         try {
             e({
                 status: "ok",
                 success: !0,
                 message: {
-                    target: i,
-                    source: n,
-                    remove: j
+                    target: $2a3645592e2d8803$var$i,
+                    source: $2a3645592e2d8803$var$n,
+                    remove: $2a3645592e2d8803$var$j
                 }
             });
         } catch (m1) {
@@ -6194,12 +5955,12 @@ var r1 = ()=>new Promise((e, m)=>{
             });
         }
     })
-, _ = (e2)=>new Promise(async (m, o)=>{
+, $2a3645592e2d8803$var$_ = (e1)=>new Promise(async (m, o)=>{
         try {
-            a1(n[`${e2}`]) ? delete i[`${e2}`] : j[`${e2}`] = !0, m({
+            $2a3645592e2d8803$var$a($2a3645592e2d8803$var$n[`${e1}`]) ? delete $2a3645592e2d8803$var$i[`${e1}`] : $2a3645592e2d8803$var$j[`${e1}`] = !0, m({
                 status: "ok",
                 success: !0,
-                message: e2
+                message: e1
             });
         } catch (e) {
             m({
@@ -6209,54 +5970,54 @@ var r1 = ()=>new Promise((e, m)=>{
             });
         }
     })
-, t = (e3, m3)=>new Promise(async (o, r)=>{
+, $2a3645592e2d8803$var$t = (e2, m2)=>new Promise(async (o, r)=>{
         try {
-            if (a1(i[`${e3}`])) {
-                if (a1(n[`${e3}`])) i[`${e3}`] = {
-                    call: m3
+            if ($2a3645592e2d8803$var$a($2a3645592e2d8803$var$i[`${e2}`])) {
+                if ($2a3645592e2d8803$var$a($2a3645592e2d8803$var$n[`${e2}`])) $2a3645592e2d8803$var$i[`${e2}`] = {
+                    call: m2
                 }, o(!0);
                 else {
-                    i[`${e3}`] = {
-                        call: m3
+                    $2a3645592e2d8803$var$i[`${e2}`] = {
+                        call: m2
                     };
-                    let r = i[`${e3}`];
-                    for(; !a1(n[`${e3}`][0]);){
+                    let r = $2a3645592e2d8803$var$i[`${e2}`];
+                    for(; !$2a3645592e2d8803$var$a($2a3645592e2d8803$var$n[`${e2}`][0]);){
                         for(let m = 0; m < r.length; m++)await r[m].call({
-                            message: n[`${e3}`][0].message,
-                            task: n[`${e3}`][0].task,
-                            call: n[`${e3}`][0].call
+                            message: $2a3645592e2d8803$var$n[`${e2}`][0].message,
+                            task: $2a3645592e2d8803$var$n[`${e2}`][0].task,
+                            call: $2a3645592e2d8803$var$n[`${e2}`][0].call
                         });
-                        n[`${e3}`].shift();
+                        $2a3645592e2d8803$var$n[`${e2}`].shift();
                     }
-                    j[`${e3}`] && (delete i[`${e3}`], delete j[`${e3}`]), delete n[`${e3}`], o(!0);
+                    $2a3645592e2d8803$var$j[`${e2}`] && (delete $2a3645592e2d8803$var$i[`${e2}`], delete $2a3645592e2d8803$var$j[`${e2}`]), delete $2a3645592e2d8803$var$n[`${e2}`], o(!0);
                 }
-            } else i[`${e3}`] = {
-                call: m3
+            } else $2a3645592e2d8803$var$i[`${e2}`] = {
+                call: m2
             }, o(!0);
         } catch (e) {
             console.log("error", e), o(!1);
         }
     })
-, s = (e4, m4, o)=>new Promise((r, _)=>{
+, $2a3645592e2d8803$var$s = (e3, m3, o)=>new Promise((r, _)=>{
         try {
-            if (a1(i[`${e4}`])) n[`${e4}`] = {
-                message: m4,
-                task: e4,
+            if ($2a3645592e2d8803$var$a($2a3645592e2d8803$var$i[`${e3}`])) $2a3645592e2d8803$var$n[`${e3}`] = {
+                message: m3,
+                task: e3,
                 call: o
             }, r(!0);
             else {
-                for(n[`${e4}`] = {
-                    message: m4,
-                    task: e4,
+                for($2a3645592e2d8803$var$n[`${e3}`] = {
+                    message: m3,
+                    task: e3,
                     call: o
-                }; !a1(n[`${e4}`][0]);)i[`${e4}`].forEach((m)=>{
+                }; !$2a3645592e2d8803$var$a($2a3645592e2d8803$var$n[`${e3}`][0]);)$2a3645592e2d8803$var$i[`${e3}`].forEach((m)=>{
                     m.call({
-                        message: n[`${e4}`][0].message,
-                        task: n[`${e4}`][0].task,
-                        call: n[`${e4}`][0].call
+                        message: $2a3645592e2d8803$var$n[`${e3}`][0].message,
+                        task: $2a3645592e2d8803$var$n[`${e3}`][0].task,
+                        call: $2a3645592e2d8803$var$n[`${e3}`][0].call
                     });
-                }), n[`${e4}`].shift();
-                j[`${e4}`] && (delete i[`${e4}`], delete j[`${e4}`]), delete n[`${e4}`], r(!0);
+                }), $2a3645592e2d8803$var$n[`${e3}`].shift();
+                $2a3645592e2d8803$var$j[`${e3}`] && (delete $2a3645592e2d8803$var$i[`${e3}`], delete $2a3645592e2d8803$var$j[`${e3}`]), delete $2a3645592e2d8803$var$n[`${e3}`], r(!0);
             }
         } catch (e) {
             r({
@@ -6267,10 +6028,10 @@ var r1 = ()=>new Promise((e, m)=>{
         }
     })
 ;
-var l = {
-    send: (e5 = "", m = {
+var $2a3645592e2d8803$export$2e2bcd8739ae039 = {
+    send: (e4 = "", m = {
     }, a = !1)=>new Promise(async (o, n)=>{
-            a ? await s(e5, m, (e)=>{
+            a ? await $2a3645592e2d8803$var$s(e4, m, (e)=>{
                 o(a ? a(e) : e);
             }) : o({
                 status: !0,
@@ -6279,27 +6040,29 @@ var l = {
             });
         })
     ,
-    wait: (e6 = "", m = (e)=>{
+    wait: (e5 = "", m = (e)=>{
         console.log("default call", e);
-    })=>t(e6, m)
+    })=>$2a3645592e2d8803$var$t(e5, m)
     ,
-    list: ()=>new Promise((e, m5)=>{
-            r1().then((m)=>{
+    list: ()=>new Promise((e, m4)=>{
+            $2a3645592e2d8803$var$r().then((m)=>{
                 e(m);
             });
         })
     ,
-    close: (e7 = "")=>new Promise((m, a)=>{
-            _(e7).then((e)=>{
+    close: (e6 = "")=>new Promise((m, a)=>{
+            $2a3645592e2d8803$var$_(e6).then((e)=>{
                 m(e);
             });
         })
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl"}],"6rPJz":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = `
+});
+
+parcelRequire.register("ibQm2", function(module, exports) {
+
+$parcel$export(module.exports, "default", () => $2233beba667401b2$export$2e2bcd8739ae039);
+var $2233beba667401b2$export$2e2bcd8739ae039 = `
 describe('Остров', async function () {
     this.timeout(10000);
     before(async function () { });
@@ -6363,61 +6126,48 @@ describe('Остров', async function () {
     })
 })`;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl"}],"cuOg2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "expect", ()=>expect
-);
-parcelHelpers.export(exports, "version", ()=>version
-);
-parcelHelpers.export(exports, "Assertion", ()=>Assertion
-);
-parcelHelpers.export(exports, "AssertionError", ()=>AssertionError
-);
-parcelHelpers.export(exports, "util", ()=>util
-);
-parcelHelpers.export(exports, "config", ()=>config
-);
-parcelHelpers.export(exports, "use", ()=>use
-);
-parcelHelpers.export(exports, "should", ()=>should
-);
-parcelHelpers.export(exports, "assert", ()=>assert
-);
-parcelHelpers.export(exports, "core", ()=>core
-);
-var _indexJs = require("./index.js");
-var _indexJsDefault = parcelHelpers.interopDefault(_indexJs);
-const expect = _indexJsDefault.default.expect;
-const version = _indexJsDefault.default.version;
-const Assertion = _indexJsDefault.default.Assertion;
-const AssertionError = _indexJsDefault.default.AssertionError;
-const util = _indexJsDefault.default.util;
-const config = _indexJsDefault.default.config;
-const use = _indexJsDefault.default.use;
-const should = _indexJsDefault.default.should;
-const assert = _indexJsDefault.default.assert;
-const core = _indexJsDefault.default.core;
-exports.default = _indexJsDefault.default;
+});
 
-},{"./index.js":"3SzMC","@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl"}],"3SzMC":[function(require,module,exports) {
-module.exports = require('./lib/chai');
+parcelRequire.register("cY47G", function(module, exports) {
 
-},{"./lib/chai":"ibVV2"}],"ibVV2":[function(require,module,exports) {
+$parcel$export(module.exports, "expect", () => $4e316b14c19564d4$export$3570f33b1a1f3329);
+$parcel$export(module.exports, "should", () => $4e316b14c19564d4$export$3f1553d94a1f489a);
+$parcel$export(module.exports, "assert", () => $4e316b14c19564d4$export$a7a9523472993e97);
+
+var $9t02Y = parcelRequire("9t02Y");
+const $4e316b14c19564d4$export$3570f33b1a1f3329 = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).expect;
+const $4e316b14c19564d4$export$83d89fbfd8236492 = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).version;
+const $4e316b14c19564d4$export$ae438a0619af4503 = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).Assertion;
+const $4e316b14c19564d4$export$7750cdfb4db2c3d = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).AssertionError;
+const $4e316b14c19564d4$export$7debb50ef11d5e0b = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).util;
+const $4e316b14c19564d4$export$e506a1d27d1eaa20 = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).config;
+const $4e316b14c19564d4$export$1f96ae73734a86cc = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).use;
+const $4e316b14c19564d4$export$3f1553d94a1f489a = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).should;
+const $4e316b14c19564d4$export$a7a9523472993e97 = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).assert;
+const $4e316b14c19564d4$export$b75f8c4f8f3fbd14 = (/*@__PURE__*/$parcel$interopDefault($9t02Y)).core;
+var $4e316b14c19564d4$export$2e2bcd8739ae039 = (/*@__PURE__*/$parcel$interopDefault($9t02Y));
+
+});
+parcelRequire.register("9t02Y", function(module, exports) {
+
+module.exports = (parcelRequire("7WE3w"));
+
+});
+parcelRequire.register("7WE3w", function(module, exports) {
 /*!
  * chai
  * Copyright(c) 2011-2014 Jake Luer <jake@alogicalparadox.com>
  * MIT Licensed
- */ var used = [];
+ */ var $5c8d0570dcbdd977$var$used = [];
 /*!
  * Chai version
- */ exports.version = '4.3.3';
+ */ module.exports.version = '4.3.3';
+
 /*!
  * Assertion Error
- */ exports.AssertionError = require('assertion-error');
-/*!
- * Utils for plugins (not exported)
- */ var util = require('./chai/utils');
+ */ module.exports.AssertionError = (parcelRequire("7ZuRG"));
+
+var $6c9h9 = parcelRequire("6c9h9");
 /**
  * # .use(function)
  *
@@ -6426,42 +6176,37 @@ module.exports = require('./lib/chai');
  * @param {Function}
  * @returns {this} for chaining
  * @api public
- */ exports.use = function(fn) {
-    if (!~used.indexOf(fn)) {
-        fn(exports, util);
-        used.push(fn);
+ */ module.exports.use = function(fn) {
+    if (!~$5c8d0570dcbdd977$var$used.indexOf(fn)) {
+        fn(module.exports, $6c9h9);
+        $5c8d0570dcbdd977$var$used.push(fn);
     }
-    return exports;
+    return module.exports;
 };
 /*!
  * Utility Functions
- */ exports.util = util;
-/*!
- * Configuration
- */ var config = require('./chai/config');
-exports.config = config;
-/*!
- * Primary `Assertion` prototype
- */ var assertion = require('./chai/assertion');
-exports.use(assertion);
-/*!
- * Core Assertions
- */ var core = require('./chai/core/assertions');
-exports.use(core);
-/*!
- * Expect interface
- */ var expect = require('./chai/interface/expect');
-exports.use(expect);
-/*!
- * Should interface
- */ var should = require('./chai/interface/should');
-exports.use(should);
-/*!
- * Assert interface
- */ var assert = require('./chai/interface/assert');
-exports.use(assert);
+ */ module.exports.util = $6c9h9;
 
-},{"assertion-error":"a5w8k","./chai/utils":"ec9EV","./chai/config":"aLW00","./chai/assertion":"l9XwH","./chai/core/assertions":"lsRwd","./chai/interface/expect":"jkhM5","./chai/interface/should":"3DF6Y","./chai/interface/assert":"45DFw"}],"a5w8k":[function(require,module,exports) {
+var $idGob = parcelRequire("idGob");
+module.exports.config = $idGob;
+
+var $ilqqA = parcelRequire("ilqqA");
+module.exports.use($ilqqA);
+
+var $gdra4 = parcelRequire("gdra4");
+module.exports.use($gdra4);
+
+var $i4BPw = parcelRequire("i4BPw");
+module.exports.use($i4BPw);
+
+var $1vy9T = parcelRequire("1vy9T");
+module.exports.use($1vy9T);
+
+var $948wg = parcelRequire("948wg");
+module.exports.use($948wg);
+
+});
+parcelRequire.register("7ZuRG", function(module, exports) {
 /*!
  * assertion-error
  * Copyright(c) 2013 Jake Luer <jake@qualiancy.com>
@@ -6473,7 +6218,7 @@ exports.use(assert);
  *
  * @param {String} excluded properties ...
  * @return {Function}
- */ function exclude() {
+ */ function $5d162c0c5882762c$var$exclude() {
     var excludes = [].slice.call(arguments);
     function excludeProps(res, obj) {
         Object.keys(obj).forEach(function(key) {
@@ -6489,7 +6234,7 @@ exports.use(assert);
 }
 /*!
  * Primary Exports
- */ module.exports = AssertionError;
+ */ module.exports = $5d162c0c5882762c$var$AssertionError;
 /**
  * ### AssertionError
  *
@@ -6499,8 +6244,8 @@ exports.use(assert);
  * @param {String} message
  * @param {Object} properties to include (optional)
  * @param {callee} start stack function (optional)
- */ function AssertionError(message, _props, ssf) {
-    var extend = exclude('name', 'message', 'stack', 'constructor', 'toJSON'), props = extend(_props || {
+ */ function $5d162c0c5882762c$var$AssertionError(message, _props, ssf) {
+    var extend = $5d162c0c5882762c$var$exclude('name', 'message', 'stack', 'constructor', 'toJSON'), props = extend(_props || {
     });
     // default values
     this.message = message || 'Unspecified AssertionError';
@@ -6508,7 +6253,7 @@ exports.use(assert);
     // copy from properties
     for(var key in props)this[key] = props[key];
     // capture stack trace
-    ssf = ssf || AssertionError;
+    ssf = ssf || $5d162c0c5882762c$var$AssertionError;
     if (Error.captureStackTrace) Error.captureStackTrace(this, ssf);
     else try {
         throw new Error();
@@ -6518,20 +6263,20 @@ exports.use(assert);
 }
 /*!
  * Inherit from Error.prototype
- */ AssertionError.prototype = Object.create(Error.prototype);
+ */ $5d162c0c5882762c$var$AssertionError.prototype = Object.create(Error.prototype);
 /*!
  * Statically set name
- */ AssertionError.prototype.name = 'AssertionError';
+ */ $5d162c0c5882762c$var$AssertionError.prototype.name = 'AssertionError';
 /*!
  * Ensure correct constructor
- */ AssertionError.prototype.constructor = AssertionError;
+ */ $5d162c0c5882762c$var$AssertionError.prototype.constructor = $5d162c0c5882762c$var$AssertionError;
 /**
  * Allow errors to be converted to JSON for static transfer.
  *
  * @param {Boolean} include stack (default: `true`)
  * @return {Object} object that can be `JSON.stringify`
- */ AssertionError.prototype.toJSON = function(stack) {
-    var extend = exclude('constructor', 'toJSON', 'stack'), props = extend({
+ */ $5d162c0c5882762c$var$AssertionError.prototype.toJSON = function(stack) {
+    var extend = $5d162c0c5882762c$var$exclude('constructor', 'toJSON', 'stack'), props = extend({
         name: this.name
     }, this);
     // include stack if exists and not turned off
@@ -6539,100 +6284,181 @@ exports.use(assert);
     return props;
 };
 
-},{}],"ec9EV":[function(require,module,exports) {
-/*!
- * chai
- * Copyright(c) 2011 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ /*!
- * Dependencies that are used for multiple exports are required here only once
- */ var pathval = require('pathval');
+});
+
+parcelRequire.register("6c9h9", function(module, exports) {
+
+$parcel$export(module.exports, "test", () => $482b0f01545d0f64$export$e0969da9b8fb378d, (v) => $482b0f01545d0f64$export$e0969da9b8fb378d = v);
+$parcel$export(module.exports, "type", () => $482b0f01545d0f64$export$bf9fb029d174d554, (v) => $482b0f01545d0f64$export$bf9fb029d174d554 = v);
+$parcel$export(module.exports, "expectTypes", () => $482b0f01545d0f64$export$1d12abcaf8feed2c, (v) => $482b0f01545d0f64$export$1d12abcaf8feed2c = v);
+$parcel$export(module.exports, "getMessage", () => $482b0f01545d0f64$export$2e51780da3c3a61, (v) => $482b0f01545d0f64$export$2e51780da3c3a61 = v);
+$parcel$export(module.exports, "getActual", () => $482b0f01545d0f64$export$9e4fe06ad5af511f, (v) => $482b0f01545d0f64$export$9e4fe06ad5af511f = v);
+$parcel$export(module.exports, "inspect", () => $482b0f01545d0f64$export$9dec5d1b3b6a130d, (v) => $482b0f01545d0f64$export$9dec5d1b3b6a130d = v);
+$parcel$export(module.exports, "objDisplay", () => $482b0f01545d0f64$export$f2a3f885330bf8a1, (v) => $482b0f01545d0f64$export$f2a3f885330bf8a1 = v);
+$parcel$export(module.exports, "flag", () => $482b0f01545d0f64$export$42405f212471e8a2, (v) => $482b0f01545d0f64$export$42405f212471e8a2 = v);
+$parcel$export(module.exports, "transferFlags", () => $482b0f01545d0f64$export$1422a3e2db669788, (v) => $482b0f01545d0f64$export$1422a3e2db669788 = v);
+$parcel$export(module.exports, "eql", () => $482b0f01545d0f64$export$276b46351d8fb064, (v) => $482b0f01545d0f64$export$276b46351d8fb064 = v);
+$parcel$export(module.exports, "getPathInfo", () => $482b0f01545d0f64$export$6a9c23cd8d24a1dc, (v) => $482b0f01545d0f64$export$6a9c23cd8d24a1dc = v);
+$parcel$export(module.exports, "hasProperty", () => $482b0f01545d0f64$export$bf9617eaf5d2451, (v) => $482b0f01545d0f64$export$bf9617eaf5d2451 = v);
+$parcel$export(module.exports, "getName", () => $482b0f01545d0f64$export$7d9f7e9c1c02b41e, (v) => $482b0f01545d0f64$export$7d9f7e9c1c02b41e = v);
+$parcel$export(module.exports, "addProperty", () => $482b0f01545d0f64$export$56da8d49d79e2ff7, (v) => $482b0f01545d0f64$export$56da8d49d79e2ff7 = v);
+$parcel$export(module.exports, "addMethod", () => $482b0f01545d0f64$export$20be359f745f973c, (v) => $482b0f01545d0f64$export$20be359f745f973c = v);
+$parcel$export(module.exports, "overwriteProperty", () => $482b0f01545d0f64$export$53855d102f526fc6, (v) => $482b0f01545d0f64$export$53855d102f526fc6 = v);
+$parcel$export(module.exports, "overwriteMethod", () => $482b0f01545d0f64$export$918326e5a647fb8d, (v) => $482b0f01545d0f64$export$918326e5a647fb8d = v);
+$parcel$export(module.exports, "addChainableMethod", () => $482b0f01545d0f64$export$75218e675cd56e9b, (v) => $482b0f01545d0f64$export$75218e675cd56e9b = v);
+$parcel$export(module.exports, "overwriteChainableMethod", () => $482b0f01545d0f64$export$3e4899c72e22727d, (v) => $482b0f01545d0f64$export$3e4899c72e22727d = v);
+$parcel$export(module.exports, "compareByInspect", () => $482b0f01545d0f64$export$93cc8d57f20cb99a, (v) => $482b0f01545d0f64$export$93cc8d57f20cb99a = v);
+$parcel$export(module.exports, "getOwnEnumerablePropertySymbols", () => $482b0f01545d0f64$export$e7e48a26b8158799, (v) => $482b0f01545d0f64$export$e7e48a26b8158799 = v);
+$parcel$export(module.exports, "getOwnEnumerableProperties", () => $482b0f01545d0f64$export$a12c3f143478a78f, (v) => $482b0f01545d0f64$export$a12c3f143478a78f = v);
+$parcel$export(module.exports, "checkError", () => $482b0f01545d0f64$export$2ceba9378ca07bfa, (v) => $482b0f01545d0f64$export$2ceba9378ca07bfa = v);
+$parcel$export(module.exports, "proxify", () => $482b0f01545d0f64$export$bec9ee79d287edf0, (v) => $482b0f01545d0f64$export$bec9ee79d287edf0 = v);
+$parcel$export(module.exports, "addLengthGuard", () => $482b0f01545d0f64$export$f1ae9ac2f23c343c, (v) => $482b0f01545d0f64$export$f1ae9ac2f23c343c = v);
+$parcel$export(module.exports, "isProxyEnabled", () => $482b0f01545d0f64$export$923818d42044116c, (v) => $482b0f01545d0f64$export$923818d42044116c = v);
+$parcel$export(module.exports, "isNaN", () => $482b0f01545d0f64$export$c9f5652083b8129d, (v) => $482b0f01545d0f64$export$c9f5652083b8129d = v);
+$parcel$export(module.exports, "getOperator", () => $482b0f01545d0f64$export$b6e51e32101e2448, (v) => $482b0f01545d0f64$export$b6e51e32101e2448 = v);
 /*!
  * test utility
- */ exports.test = require('./test');
+ */ var $482b0f01545d0f64$export$e0969da9b8fb378d;
 /*!
  * type utility
- */ exports.type = require('type-detect');
+ */ var $482b0f01545d0f64$export$bf9fb029d174d554;
 /*!
  * expectTypes utility
- */ exports.expectTypes = require('./expectTypes');
+ */ var $482b0f01545d0f64$export$1d12abcaf8feed2c;
 /*!
  * message utility
- */ exports.getMessage = require('./getMessage');
+ */ var $482b0f01545d0f64$export$2e51780da3c3a61;
 /*!
  * actual utility
- */ exports.getActual = require('./getActual');
+ */ var $482b0f01545d0f64$export$9e4fe06ad5af511f;
 /*!
  * Inspect util
- */ exports.inspect = require('./inspect');
+ */ var $482b0f01545d0f64$export$9dec5d1b3b6a130d;
 /*!
  * Object Display util
- */ exports.objDisplay = require('./objDisplay');
+ */ var $482b0f01545d0f64$export$f2a3f885330bf8a1;
 /*!
  * Flag utility
- */ exports.flag = require('./flag');
+ */ var $482b0f01545d0f64$export$42405f212471e8a2;
 /*!
  * Flag transferring utility
- */ exports.transferFlags = require('./transferFlags');
+ */ var $482b0f01545d0f64$export$1422a3e2db669788;
 /*!
  * Deep equal utility
- */ exports.eql = require('deep-eql');
+ */ var $482b0f01545d0f64$export$276b46351d8fb064;
 /*!
  * Deep path info
- */ exports.getPathInfo = pathval.getPathInfo;
+ */ var $482b0f01545d0f64$export$6a9c23cd8d24a1dc;
 /*!
  * Check if a property exists
- */ exports.hasProperty = pathval.hasProperty;
+ */ var $482b0f01545d0f64$export$bf9617eaf5d2451;
 /*!
  * Function name
- */ exports.getName = require('get-func-name');
+ */ var $482b0f01545d0f64$export$7d9f7e9c1c02b41e;
 /*!
  * add Property
- */ exports.addProperty = require('./addProperty');
+ */ var $482b0f01545d0f64$export$56da8d49d79e2ff7;
 /*!
  * add Method
- */ exports.addMethod = require('./addMethod');
+ */ var $482b0f01545d0f64$export$20be359f745f973c;
 /*!
  * overwrite Property
- */ exports.overwriteProperty = require('./overwriteProperty');
+ */ var $482b0f01545d0f64$export$53855d102f526fc6;
 /*!
  * overwrite Method
- */ exports.overwriteMethod = require('./overwriteMethod');
+ */ var $482b0f01545d0f64$export$918326e5a647fb8d;
 /*!
  * Add a chainable method
- */ exports.addChainableMethod = require('./addChainableMethod');
+ */ var $482b0f01545d0f64$export$75218e675cd56e9b;
 /*!
  * Overwrite chainable method
- */ exports.overwriteChainableMethod = require('./overwriteChainableMethod');
+ */ var $482b0f01545d0f64$export$3e4899c72e22727d;
 /*!
  * Compare by inspect method
- */ exports.compareByInspect = require('./compareByInspect');
+ */ var $482b0f01545d0f64$export$93cc8d57f20cb99a;
 /*!
  * Get own enumerable property symbols method
- */ exports.getOwnEnumerablePropertySymbols = require('./getOwnEnumerablePropertySymbols');
+ */ var $482b0f01545d0f64$export$e7e48a26b8158799;
 /*!
  * Get own enumerable properties method
- */ exports.getOwnEnumerableProperties = require('./getOwnEnumerableProperties');
+ */ var $482b0f01545d0f64$export$a12c3f143478a78f;
 /*!
  * Checks error against a given set of criteria
- */ exports.checkError = require('check-error');
+ */ var $482b0f01545d0f64$export$2ceba9378ca07bfa;
 /*!
  * Proxify util
- */ exports.proxify = require('./proxify');
+ */ var $482b0f01545d0f64$export$bec9ee79d287edf0;
 /*!
  * addLengthGuard util
- */ exports.addLengthGuard = require('./addLengthGuard');
+ */ var $482b0f01545d0f64$export$f1ae9ac2f23c343c;
 /*!
  * isProxyEnabled helper
- */ exports.isProxyEnabled = require('./isProxyEnabled');
+ */ var $482b0f01545d0f64$export$923818d42044116c;
 /*!
  * isNaN method
- */ exports.isNaN = require('./isNaN');
+ */ var $482b0f01545d0f64$export$c9f5652083b8129d;
 /*!
  * getOperator method
- */ exports.getOperator = require('./getOperator');
+ */ var $482b0f01545d0f64$export$b6e51e32101e2448;
 
-},{"pathval":"iiuFb","./test":"hR2q8","type-detect":"fBV4L","./expectTypes":"ca342","./getMessage":"dWF3L","./getActual":"01opB","./inspect":"4aOuP","./objDisplay":"d0PpF","./flag":"8xax6","./transferFlags":"6t06f","deep-eql":"h8uHM","get-func-name":"d99Vd","./addProperty":"buORk","./addMethod":"jgtLI","./overwriteProperty":"5ejjg","./overwriteMethod":"4HXJM","./addChainableMethod":"9DCBd","./overwriteChainableMethod":"iRfMs","./compareByInspect":"jWO3x","./getOwnEnumerablePropertySymbols":"1OlqS","./getOwnEnumerableProperties":"3kroT","check-error":"dD2IF","./proxify":"3SIVj","./addLengthGuard":"98Lls","./isProxyEnabled":"exZmD","./isNaN":"01sjn","./getOperator":"fNpYH"}],"iiuFb":[function(require,module,exports) {
+var $7XA4g = parcelRequire("7XA4g");
+
+$482b0f01545d0f64$export$e0969da9b8fb378d = (parcelRequire("gQYXP"));
+
+$482b0f01545d0f64$export$bf9fb029d174d554 = (parcelRequire("9skhJ"));
+
+$482b0f01545d0f64$export$1d12abcaf8feed2c = (parcelRequire("hGHIT"));
+
+$482b0f01545d0f64$export$2e51780da3c3a61 = (parcelRequire("kRA9L"));
+
+$482b0f01545d0f64$export$9e4fe06ad5af511f = (parcelRequire("3tIoD"));
+
+$482b0f01545d0f64$export$9dec5d1b3b6a130d = (parcelRequire("igKev"));
+
+$482b0f01545d0f64$export$f2a3f885330bf8a1 = (parcelRequire("hGFV9"));
+
+$482b0f01545d0f64$export$42405f212471e8a2 = (parcelRequire("e2AW3"));
+
+$482b0f01545d0f64$export$1422a3e2db669788 = (parcelRequire("hn7ck"));
+
+$482b0f01545d0f64$export$276b46351d8fb064 = (parcelRequire("gYN81"));
+$482b0f01545d0f64$export$6a9c23cd8d24a1dc = $7XA4g.getPathInfo;
+$482b0f01545d0f64$export$bf9617eaf5d2451 = $7XA4g.hasProperty;
+
+$482b0f01545d0f64$export$7d9f7e9c1c02b41e = (parcelRequire("drVFc"));
+
+$482b0f01545d0f64$export$56da8d49d79e2ff7 = (parcelRequire("hnLju"));
+
+$482b0f01545d0f64$export$20be359f745f973c = (parcelRequire("dwEIq"));
+
+$482b0f01545d0f64$export$53855d102f526fc6 = (parcelRequire("7Wk5I"));
+
+$482b0f01545d0f64$export$918326e5a647fb8d = (parcelRequire("l2kSg"));
+
+$482b0f01545d0f64$export$75218e675cd56e9b = (parcelRequire("bpUiI"));
+
+$482b0f01545d0f64$export$3e4899c72e22727d = (parcelRequire("3aD7t"));
+
+$482b0f01545d0f64$export$93cc8d57f20cb99a = (parcelRequire("1y7u2"));
+
+$482b0f01545d0f64$export$e7e48a26b8158799 = (parcelRequire("ff869"));
+
+$482b0f01545d0f64$export$a12c3f143478a78f = (parcelRequire("bknm4"));
+
+$482b0f01545d0f64$export$2ceba9378ca07bfa = (parcelRequire("2uRKw"));
+
+$482b0f01545d0f64$export$bec9ee79d287edf0 = (parcelRequire("ggytc"));
+
+$482b0f01545d0f64$export$f1ae9ac2f23c343c = (parcelRequire("cgAzM"));
+
+$482b0f01545d0f64$export$923818d42044116c = (parcelRequire("l9aQx"));
+
+$482b0f01545d0f64$export$c9f5652083b8129d = (parcelRequire("i0HXH"));
+
+$482b0f01545d0f64$export$b6e51e32101e2448 = (parcelRequire("8Vfa7"));
+
+});
+parcelRequire.register("7XA4g", function(module, exports) {
 'use strict';
 /* !
  * Chai - pathval utility
@@ -6674,7 +6500,7 @@ exports.use(assert);
  * @namespace Utils
  * @name hasProperty
  * @api public
- */ function hasProperty(obj, name) {
+ */ function $5cba05606294890f$var$hasProperty(obj, name) {
     if (typeof obj === 'undefined' || obj === null) return false;
     // The `in` operator does not work with primitives.
     return name in Object(obj);
@@ -6696,7 +6522,7 @@ exports.use(assert);
  * @param {String} path
  * @returns {Object} parsed
  * @api private
- */ function parsePath(path) {
+ */ function $5cba05606294890f$var$parsePath(path) {
     var str = path.replace(/([^\\])\[/g, '$1.[');
     var parts = str.match(/(\\\.|[^.]+?)+/g);
     return parts.map(function mapMatches(value) {
@@ -6727,7 +6553,7 @@ exports.use(assert);
  * @param {Number} depth (nesting level) of the property we want to retrieve
  * @returns {Object|Undefined} value
  * @api private
- */ function internalGetPathValue(obj, parsed, pathDepth) {
+ */ function $5cba05606294890f$var$internalGetPathValue(obj, parsed, pathDepth) {
     var temporaryValue = obj;
     var res = null;
     pathDepth = typeof pathDepth === 'undefined' ? parsed.length : pathDepth;
@@ -6753,7 +6579,7 @@ exports.use(assert);
  * @param {*} value to use upon set
  * @param {Object} parsed definition from `parsePath`
  * @api private
- */ function internalSetPathValue(obj, val, parsed) {
+ */ function $5cba05606294890f$var$internalSetPathValue(obj, val, parsed) {
     var tempObj = obj;
     var pathDepth = parsed.length;
     var part = null;
@@ -6802,15 +6628,15 @@ exports.use(assert);
  * @namespace Utils
  * @name getPathInfo
  * @api public
- */ function getPathInfo(obj, path) {
-    var parsed = parsePath(path);
+ */ function $5cba05606294890f$var$getPathInfo(obj, path) {
+    var parsed = $5cba05606294890f$var$parsePath(path);
     var last = parsed[parsed.length - 1];
     var info = {
-        parent: parsed.length > 1 ? internalGetPathValue(obj, parsed, parsed.length - 1) : obj,
+        parent: parsed.length > 1 ? $5cba05606294890f$var$internalGetPathValue(obj, parsed, parsed.length - 1) : obj,
         name: last.p || last.i,
-        value: internalGetPathValue(obj, parsed)
+        value: $5cba05606294890f$var$internalGetPathValue(obj, parsed)
     };
-    info.exists = hasProperty(info.parent, info.name);
+    info.exists = $5cba05606294890f$var$hasProperty(info.parent, info.name);
     return info;
 }
 /**
@@ -6842,8 +6668,8 @@ exports.use(assert);
  * @namespace Utils
  * @name getPathValue
  * @api public
- */ function getPathValue(obj, path) {
-    var info = getPathInfo(obj, path);
+ */ function $5cba05606294890f$var$getPathValue(obj, path) {
+    var info = $5cba05606294890f$var$getPathInfo(obj, path);
     return info.value;
 }
 /**
@@ -6877,26 +6703,23 @@ exports.use(assert);
  * @param {String} path
  * @param {Mixed} value
  * @api private
- */ function setPathValue(obj, path, val) {
-    var parsed = parsePath(path);
-    internalSetPathValue(obj, val, parsed);
+ */ function $5cba05606294890f$var$setPathValue(obj, path, val) {
+    var parsed = $5cba05606294890f$var$parsePath(path);
+    $5cba05606294890f$var$internalSetPathValue(obj, val, parsed);
     return obj;
 }
 module.exports = {
-    hasProperty: hasProperty,
-    getPathInfo: getPathInfo,
-    getPathValue: getPathValue,
-    setPathValue: setPathValue
+    hasProperty: $5cba05606294890f$var$hasProperty,
+    getPathInfo: $5cba05606294890f$var$getPathInfo,
+    getPathValue: $5cba05606294890f$var$getPathValue,
+    setPathValue: $5cba05606294890f$var$setPathValue
 };
 
-},{}],"hR2q8":[function(require,module,exports) {
-/*!
- * Chai - test utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ /*!
- * Module dependencies
- */ var flag = require('./flag');
+});
+
+parcelRequire.register("gQYXP", function(module, exports) {
+
+var $e2AW3 = parcelRequire("e2AW3");
 /**
  * ### .test(object, expression)
  *
@@ -6907,11 +6730,12 @@ module.exports = {
  * @namespace Utils
  * @name test
  */ module.exports = function test(obj, args) {
-    var negate = flag(obj, 'negate'), expr = args[0];
+    var negate = $e2AW3(obj, 'negate'), expr = args[0];
     return negate ? !expr : expr;
 };
 
-},{"./flag":"8xax6"}],"8xax6":[function(require,module,exports) {
+});
+parcelRequire.register("e2AW3", function(module, exports) {
 /*!
  * Chai - flag utility
  * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
@@ -6939,18 +6763,20 @@ module.exports = {
     else return flags[key];
 };
 
-},{}],"fBV4L":[function(require,module,exports) {
-var global1 = arguments[3];
+});
+
+
+parcelRequire.register("9skhJ", function(module, exports) {
 (function(global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : global.typeDetect = factory();
-})(this, function() {
+    typeof module.exports === 'object' && "object" !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : global.typeDetect = factory();
+})(module.exports, function() {
     'use strict';
     /* !
  * type-detect
  * Copyright(c) 2013 jake luer <jake@alogicalparadox.com>
  * MIT Licensed
  */ var promiseExists = typeof Promise === 'function';
-    /* eslint-disable no-undef */ var globalObject = typeof self === 'object' ? self : global1; // eslint-disable-line id-blacklist
+    /* eslint-disable no-undef */ var globalObject = typeof self === 'object' ? self : $parcel$global; // eslint-disable-line id-blacklist
     var symbolExists = typeof Symbol !== 'undefined';
     var mapExists = typeof Map !== 'undefined';
     var setExists = typeof Set !== 'undefined';
@@ -7210,31 +7036,20 @@ var global1 = arguments[3];
     return typeDetect;
 });
 
-},{}],"ca342":[function(require,module,exports) {
-/*!
- * Chai - expectTypes utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ /**
- * ### .expectTypes(obj, types)
- *
- * Ensures that the object being tested against is of a valid type.
- *
- *     utils.expectTypes(this, ['array', 'object', 'string']);
- *
- * @param {Mixed} obj constructed Assertion
- * @param {Array} type A list of allowed types for this assertion
- * @namespace Utils
- * @name expectTypes
- * @api public
- */ var AssertionError = require('assertion-error');
-var flag = require('./flag');
-var type = require('type-detect');
+});
+
+parcelRequire.register("hGHIT", function(module, exports) {
+
+var $7ZuRG = parcelRequire("7ZuRG");
+
+var $e2AW3 = parcelRequire("e2AW3");
+
+var $9skhJ = parcelRequire("9skhJ");
 module.exports = function expectTypes(obj, types) {
-    var flagMsg = flag(obj, 'message');
-    var ssfi = flag(obj, 'ssfi');
+    var flagMsg = $e2AW3(obj, 'message');
+    var ssfi = $e2AW3(obj, 'ssfi');
     flagMsg = flagMsg ? flagMsg + ': ' : '';
-    obj = flag(obj, 'object');
+    obj = $e2AW3(obj, 'object');
     types = types.map(function(t) {
         return t.toLowerCase();
     });
@@ -7251,20 +7066,21 @@ module.exports = function expectTypes(obj, types) {
         var or = types.length > 1 && index === types.length - 1 ? 'or ' : '';
         return or + art + ' ' + t;
     }).join(', ');
-    var objType = type(obj).toLowerCase();
+    var objType = $9skhJ(obj).toLowerCase();
     if (!types.some(function(expected) {
         return objType === expected;
-    })) throw new AssertionError(flagMsg + 'object tested must be ' + str + ', but ' + objType + ' given', undefined, ssfi);
+    })) throw new $7ZuRG(flagMsg + 'object tested must be ' + str + ', but ' + objType + ' given', undefined, ssfi);
 };
 
-},{"assertion-error":"a5w8k","./flag":"8xax6","type-detect":"fBV4L"}],"dWF3L":[function(require,module,exports) {
-/*!
- * Chai - message composition utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ /*!
- * Module dependencies
- */ var flag = require('./flag'), getActual = require('./getActual'), objDisplay = require('./objDisplay');
+});
+
+parcelRequire.register("kRA9L", function(module, exports) {
+
+var $e2AW3 = parcelRequire("e2AW3");
+
+var $3tIoD = parcelRequire("3tIoD");
+
+var $hGFV9 = parcelRequire("hGFV9");
 /**
  * ### .getMessage(object, message, negateMessage)
  *
@@ -7283,20 +7099,21 @@ module.exports = function expectTypes(obj, types) {
  * @name getMessage
  * @api public
  */ module.exports = function getMessage(obj, args) {
-    var negate = flag(obj, 'negate'), val = flag(obj, 'object'), expected = args[3], actual = getActual(obj, args), msg = negate ? args[2] : args[1], flagMsg = flag(obj, 'message');
+    var negate = $e2AW3(obj, 'negate'), val = $e2AW3(obj, 'object'), expected = args[3], actual = $3tIoD(obj, args), msg = negate ? args[2] : args[1], flagMsg = $e2AW3(obj, 'message');
     if (typeof msg === "function") msg = msg();
     msg = msg || '';
     msg = msg.replace(/#\{this\}/g, function() {
-        return objDisplay(val);
+        return $hGFV9(val);
     }).replace(/#\{act\}/g, function() {
-        return objDisplay(actual);
+        return $hGFV9(actual);
     }).replace(/#\{exp\}/g, function() {
-        return objDisplay(expected);
+        return $hGFV9(expected);
     });
     return flagMsg ? flagMsg + ': ' + msg : msg;
 };
 
-},{"./flag":"8xax6","./getActual":"01opB","./objDisplay":"d0PpF"}],"01opB":[function(require,module,exports) {
+});
+parcelRequire.register("3tIoD", function(module, exports) {
 /*!
  * Chai - getActual utility
  * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
@@ -7314,15 +7131,13 @@ module.exports = function expectTypes(obj, types) {
     return args.length > 4 ? args[4] : obj._obj;
 };
 
-},{}],"d0PpF":[function(require,module,exports) {
-/*!
- * Chai - flag utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ /*!
- * Module dependencies
- */ var inspect = require('./inspect');
-var config = require('../config');
+});
+
+parcelRequire.register("hGFV9", function(module, exports) {
+
+var $igKev = parcelRequire("igKev");
+
+var $idGob = parcelRequire("idGob");
 /**
  * ### .objDisplay(object)
  *
@@ -7335,8 +7150,8 @@ var config = require('../config');
  * @namespace Utils
  * @api public
  */ module.exports = function objDisplay(obj) {
-    var str = inspect(obj), type = Object.prototype.toString.call(obj);
-    if (config.truncateThreshold && str.length >= config.truncateThreshold) {
+    var str = $igKev(obj), type = Object.prototype.toString.call(obj);
+    if ($idGob.truncateThreshold && str.length >= $idGob.truncateThreshold) {
         if (type === '[object Function]') return !obj.name || obj.name === '' ? '[Function]' : '[Function: ' + obj.name + ']';
         else if (type === '[object Array]') return '[ Array(' + obj.length + ') ]';
         else if (type === '[object Object]') {
@@ -7346,14 +7161,17 @@ var config = require('../config');
     } else return str;
 };
 
-},{"./inspect":"4aOuP","../config":"aLW00"}],"4aOuP":[function(require,module,exports) {
-// This is (almost) directly from Node.js utils
-// https://github.com/joyent/node/blob/f8c335d0caf47f16d31413f89aa28eda3878e3aa/lib/util.js
-var getName = require('get-func-name');
-var getProperties = require('./getProperties');
-var getEnumerableProperties = require('./getEnumerableProperties');
-var config = require('../config');
-module.exports = inspect;
+});
+parcelRequire.register("igKev", function(module, exports) {
+
+var $drVFc = parcelRequire("drVFc");
+
+var $b49ZH = parcelRequire("b49ZH");
+
+var $iwRBN = parcelRequire("iwRBN");
+
+var $idGob = parcelRequire("idGob");
+module.exports = $d4cd958387a787a0$var$inspect;
 /**
  * ### .inspect(obj, [showHidden], [depth], [colors])
  *
@@ -7368,7 +7186,7 @@ module.exports = inspect;
  *    output. Default is false (no coloring).
  * @namespace Utils
  * @name inspect
- */ function inspect(obj, showHidden, depth, colors) {
+ */ function $d4cd958387a787a0$var$inspect(obj, showHidden, depth, colors) {
     var ctx = {
         showHidden: showHidden,
         seen: [],
@@ -7376,28 +7194,28 @@ module.exports = inspect;
             return str;
         }
     };
-    return formatValue(ctx, obj, typeof depth === 'undefined' ? 2 : depth);
+    return $d4cd958387a787a0$var$formatValue(ctx, obj, typeof depth === 'undefined' ? 2 : depth);
 }
 // Returns true if object is a DOM element.
-var isDOMElement = function(object) {
+var $d4cd958387a787a0$var$isDOMElement = function(object) {
     if (typeof HTMLElement === 'object') return object instanceof HTMLElement;
     else return object && typeof object === 'object' && 'nodeType' in object && object.nodeType === 1 && typeof object.nodeName === 'string';
 };
-function formatValue(ctx, value, recurseTimes) {
+function $d4cd958387a787a0$var$formatValue(ctx, value, recurseTimes) {
     // Provide a hook for user-specified inspect functions.
     // Check that value is an object with an inspect function on it
     if (value && typeof value.inspect === 'function' && // Filter out the util module, it's inspect function is special
-    value.inspect !== exports.inspect && // Also filter out any prototype objects using the circular check.
+    value.inspect !== module.exports.inspect && // Also filter out any prototype objects using the circular check.
     !(value.constructor && value.constructor.prototype === value)) {
         var ret = value.inspect(recurseTimes, ctx);
-        if (typeof ret !== 'string') ret = formatValue(ctx, ret, recurseTimes);
+        if (typeof ret !== 'string') ret = $d4cd958387a787a0$var$formatValue(ctx, ret, recurseTimes);
         return ret;
     }
     // Primitive types cannot have properties
-    var primitive = formatPrimitive(ctx, value);
+    var primitive = $d4cd958387a787a0$var$formatPrimitive(ctx, value);
     if (primitive) return primitive;
     // If this is a DOM element, try to get the outer HTML.
-    if (isDOMElement(value)) {
+    if ($d4cd958387a787a0$var$isDOMElement(value)) {
         if ('outerHTML' in value) return value.outerHTML;
         else // Attempt to serialize it
         try {
@@ -7422,27 +7240,27 @@ function formatValue(ctx, value, recurseTimes) {
         }
     }
     // Look up the keys of the object.
-    var visibleKeys = getEnumerableProperties(value);
-    var keys = ctx.showHidden ? getProperties(value) : visibleKeys;
+    var visibleKeys = $iwRBN(value);
+    var keys = ctx.showHidden ? $b49ZH(value) : visibleKeys;
     var name, nameSuffix;
     // Some type of object without properties can be shortcut.
     // In IE, errors have a single `stack` property, or if they are vanilla `Error`,
     // a `stack` plus `description` property; ignore those for consistency.
-    if (keys.length === 0 || isError(value) && (keys.length === 1 && keys[0] === 'stack' || keys.length === 2 && keys[0] === 'description' && keys[1] === 'stack')) {
+    if (keys.length === 0 || $d4cd958387a787a0$var$isError(value) && (keys.length === 1 && keys[0] === 'stack' || keys.length === 2 && keys[0] === 'description' && keys[1] === 'stack')) {
         if (typeof value === 'function') {
-            name = getName(value);
+            name = $drVFc(value);
             nameSuffix = name ? ': ' + name : '';
             return ctx.stylize('[Function' + nameSuffix + ']', 'special');
         }
-        if (isRegExp(value)) return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
-        if (isDate(value)) return ctx.stylize(Date.prototype.toUTCString.call(value), 'date');
-        if (isError(value)) return formatError(value);
+        if ($d4cd958387a787a0$var$isRegExp(value)) return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+        if ($d4cd958387a787a0$var$isDate(value)) return ctx.stylize(Date.prototype.toUTCString.call(value), 'date');
+        if ($d4cd958387a787a0$var$isError(value)) return $d4cd958387a787a0$var$formatError(value);
     }
     var base = '', array = false, typedArray = false, braces = [
         '{',
         '}'
     ];
-    if (isTypedArray(value)) {
+    if ($d4cd958387a787a0$var$isTypedArray(value)) {
         typedArray = true;
         braces = [
             '[',
@@ -7450,7 +7268,7 @@ function formatValue(ctx, value, recurseTimes) {
         ];
     }
     // Make Array say that they are Array
-    if (isArray(value)) {
+    if ($d4cd958387a787a0$var$isArray(value)) {
         array = true;
         braces = [
             '[',
@@ -7459,32 +7277,32 @@ function formatValue(ctx, value, recurseTimes) {
     }
     // Make functions say that they are functions
     if (typeof value === 'function') {
-        name = getName(value);
+        name = $drVFc(value);
         nameSuffix = name ? ': ' + name : '';
         base = ' [Function' + nameSuffix + ']';
     }
     // Make RegExps say that they are RegExps
-    if (isRegExp(value)) base = ' ' + RegExp.prototype.toString.call(value);
+    if ($d4cd958387a787a0$var$isRegExp(value)) base = ' ' + RegExp.prototype.toString.call(value);
     // Make dates with properties first say the date
-    if (isDate(value)) base = ' ' + Date.prototype.toUTCString.call(value);
+    if ($d4cd958387a787a0$var$isDate(value)) base = ' ' + Date.prototype.toUTCString.call(value);
     // Make error with message first say the error
-    if (isError(value)) return formatError(value);
+    if ($d4cd958387a787a0$var$isError(value)) return $d4cd958387a787a0$var$formatError(value);
     if (keys.length === 0 && (!array || value.length == 0)) return braces[0] + base + braces[1];
     if (recurseTimes < 0) {
-        if (isRegExp(value)) return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+        if ($d4cd958387a787a0$var$isRegExp(value)) return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
         else return ctx.stylize('[Object]', 'special');
     }
     ctx.seen.push(value);
     var output;
-    if (array) output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
-    else if (typedArray) return formatTypedArray(value);
+    if (array) output = $d4cd958387a787a0$var$formatArray(ctx, value, recurseTimes, visibleKeys, keys);
+    else if (typedArray) return $d4cd958387a787a0$var$formatTypedArray(value);
     else output = keys.map(function(key) {
-        return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+        return $d4cd958387a787a0$var$formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
     });
     ctx.seen.pop();
-    return reduceToSingleString(output, base, braces);
+    return $d4cd958387a787a0$var$reduceToSingleString(output, base, braces);
 }
-function formatPrimitive(ctx, value) {
+function $d4cd958387a787a0$var$formatPrimitive(ctx, value) {
     switch(typeof value){
         case 'undefined':
             return ctx.stylize('undefined', 'undefined');
@@ -7504,22 +7322,22 @@ function formatPrimitive(ctx, value) {
     // For some reason typeof null is "object", so special case here.
     if (value === null) return ctx.stylize('null', 'null');
 }
-function formatError(value) {
+function $d4cd958387a787a0$var$formatError(value) {
     return '[' + Error.prototype.toString.call(value) + ']';
 }
-function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
+function $d4cd958387a787a0$var$formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
     var output = [];
-    for(var i = 0, l = value.length; i < l; ++i)if (Object.prototype.hasOwnProperty.call(value, String(i))) output.push(formatProperty(ctx, value, recurseTimes, visibleKeys, String(i), true));
+    for(var i = 0, l = value.length; i < l; ++i)if (Object.prototype.hasOwnProperty.call(value, String(i))) output.push($d4cd958387a787a0$var$formatProperty(ctx, value, recurseTimes, visibleKeys, String(i), true));
     else output.push('');
     keys.forEach(function(key) {
-        if (!key.match(/^\d+$/)) output.push(formatProperty(ctx, value, recurseTimes, visibleKeys, key, true));
+        if (!key.match(/^\d+$/)) output.push($d4cd958387a787a0$var$formatProperty(ctx, value, recurseTimes, visibleKeys, key, true));
     });
     return output;
 }
-function formatTypedArray(value) {
+function $d4cd958387a787a0$var$formatTypedArray(value) {
     var str = '[ ';
     for(var i = 0; i < value.length; ++i){
-        if (str.length >= config.truncateThreshold - 7) {
+        if (str.length >= $idGob.truncateThreshold - 7) {
             str += '...';
             break;
         }
@@ -7530,7 +7348,7 @@ function formatTypedArray(value) {
     if (str.indexOf(',  ]') !== -1) str = str.replace(',  ]', ' ]');
     return str;
 }
-function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
+function $d4cd958387a787a0$var$formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
     var name;
     var propDescriptor = Object.getOwnPropertyDescriptor(value, key);
     var str;
@@ -7543,8 +7361,8 @@ function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
     if (visibleKeys.indexOf(key) < 0) name = '[' + key + ']';
     if (!str) {
         if (ctx.seen.indexOf(value[key]) < 0) {
-            if (recurseTimes === null) str = formatValue(ctx, value[key], null);
-            else str = formatValue(ctx, value[key], recurseTimes - 1);
+            if (recurseTimes === null) str = $d4cd958387a787a0$var$formatValue(ctx, value[key], null);
+            else str = $d4cd958387a787a0$var$formatValue(ctx, value[key], recurseTimes - 1);
             if (str.indexOf('\n') > -1) {
                 if (array) str = str.split('\n').map(function(line) {
                     return '  ' + line;
@@ -7568,35 +7386,36 @@ function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
     }
     return name + ': ' + str;
 }
-function reduceToSingleString(output, base, braces) {
+function $d4cd958387a787a0$var$reduceToSingleString(output, base, braces) {
     var length = output.reduce(function(prev, cur) {
         return prev + cur.length + 1;
     }, 0);
     if (length > 60) return braces[0] + (base === '' ? '' : base + '\n ') + ' ' + output.join(',\n  ') + ' ' + braces[1];
     return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
 }
-function isTypedArray(ar) {
+function $d4cd958387a787a0$var$isTypedArray(ar) {
     // Unfortunately there's no way to check if an object is a TypedArray
     // We have to check if it's one of these types
-    return typeof ar === 'object' && /\w+Array]$/.test(objectToString(ar));
+    return typeof ar === 'object' && /\w+Array]$/.test($d4cd958387a787a0$var$objectToString(ar));
 }
-function isArray(ar) {
-    return Array.isArray(ar) || typeof ar === 'object' && objectToString(ar) === '[object Array]';
+function $d4cd958387a787a0$var$isArray(ar) {
+    return Array.isArray(ar) || typeof ar === 'object' && $d4cd958387a787a0$var$objectToString(ar) === '[object Array]';
 }
-function isRegExp(re) {
-    return typeof re === 'object' && objectToString(re) === '[object RegExp]';
+function $d4cd958387a787a0$var$isRegExp(re) {
+    return typeof re === 'object' && $d4cd958387a787a0$var$objectToString(re) === '[object RegExp]';
 }
-function isDate(d) {
-    return typeof d === 'object' && objectToString(d) === '[object Date]';
+function $d4cd958387a787a0$var$isDate(d) {
+    return typeof d === 'object' && $d4cd958387a787a0$var$objectToString(d) === '[object Date]';
 }
-function isError(e) {
-    return typeof e === 'object' && objectToString(e) === '[object Error]';
+function $d4cd958387a787a0$var$isError(e) {
+    return typeof e === 'object' && $d4cd958387a787a0$var$objectToString(e) === '[object Error]';
 }
-function objectToString(o) {
+function $d4cd958387a787a0$var$objectToString(o) {
     return Object.prototype.toString.call(o);
 }
 
-},{"get-func-name":"d99Vd","./getProperties":"4XrIS","./getEnumerableProperties":"kXEyu","../config":"aLW00"}],"d99Vd":[function(require,module,exports) {
+});
+parcelRequire.register("drVFc", function(module, exports) {
 'use strict';
 /* !
  * Chai - getFuncName utility
@@ -7613,22 +7432,24 @@ function objectToString(o) {
  * @param {Function} funct
  * @namespace Utils
  * @api public
- */ var toString = Function.prototype.toString;
-var functionNameMatch = /\s*function(?:\s|\s*\/\*[^(?:*\/)]+\*\/\s*)*([^\s\(\/]+)/;
-function getFuncName(aFunc) {
+ */ var $9caa86c5cf91ed2a$var$toString = Function.prototype.toString;
+var $9caa86c5cf91ed2a$var$functionNameMatch = /\s*function(?:\s|\s*\/\*[^(?:*\/)]+\*\/\s*)*([^\s\(\/]+)/;
+function $9caa86c5cf91ed2a$var$getFuncName(aFunc) {
     if (typeof aFunc !== 'function') return null;
     var name = '';
     if (typeof Function.prototype.name === 'undefined' && typeof aFunc.name === 'undefined') {
         // Here we run a polyfill if Function does not support the `name` property and if aFunc.name is not defined
-        var match = toString.call(aFunc).match(functionNameMatch);
+        var match = $9caa86c5cf91ed2a$var$toString.call(aFunc).match($9caa86c5cf91ed2a$var$functionNameMatch);
         if (match) name = match[1];
     } else // If we've got a `name` property we just use it
     name = aFunc.name;
     return name;
 }
-module.exports = getFuncName;
+module.exports = $9caa86c5cf91ed2a$var$getFuncName;
 
-},{}],"4XrIS":[function(require,module,exports) {
+});
+
+parcelRequire.register("b49ZH", function(module, exports) {
 /*!
  * Chai - getProperties utility
  * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
@@ -7657,7 +7478,9 @@ module.exports = getFuncName;
     return result;
 };
 
-},{}],"kXEyu":[function(require,module,exports) {
+});
+
+parcelRequire.register("iwRBN", function(module, exports) {
 /*!
  * Chai - getEnumerableProperties utility
  * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
@@ -7679,7 +7502,9 @@ module.exports = getFuncName;
     return result;
 };
 
-},{}],"aLW00":[function(require,module,exports) {
+});
+
+parcelRequire.register("idGob", function(module, exports) {
 module.exports = {
     /**
    * ### config.includeStack
@@ -7765,7 +7590,12 @@ module.exports = {
     ]
 };
 
-},{}],"6t06f":[function(require,module,exports) {
+});
+
+
+
+
+parcelRequire.register("hn7ck", function(module, exports) {
 /*!
  * Chai - transferFlags utility
  * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
@@ -7798,17 +7628,16 @@ module.exports = {
     for(var flag in flags)if (includeAll || flag !== 'object' && flag !== 'ssfi' && flag !== 'lockSsfi' && flag != 'message') object.__flags[flag] = flags[flag];
 };
 
-},{}],"h8uHM":[function(require,module,exports) {
+});
+
+parcelRequire.register("gYN81", function(module, exports) {
 'use strict';
-/* globals Symbol: false, Uint8Array: false, WeakMap: false */ /*!
- * deep-eql
- * Copyright(c) 2013 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ var type = require('type-detect');
-function FakeMap() {
+
+var $9skhJ = parcelRequire("9skhJ");
+function $c5c85bd15edb785c$var$FakeMap() {
     this._key = 'chai/deep-eql__' + Math.random() + Date.now();
 }
-FakeMap.prototype = {
+$c5c85bd15edb785c$var$FakeMap.prototype = {
     get: function getMap(key) {
         return key[this._key];
     },
@@ -7819,7 +7648,7 @@ FakeMap.prototype = {
         });
     }
 };
-var MemoizeMap = typeof WeakMap === 'function' ? WeakMap : FakeMap;
+var $c5c85bd15edb785c$var$MemoizeMap = typeof WeakMap === 'function' ? WeakMap : $c5c85bd15edb785c$var$FakeMap;
 /*!
  * Check to see if the MemoizeMap has recorded a result of the two operands
  *
@@ -7827,9 +7656,9 @@ var MemoizeMap = typeof WeakMap === 'function' ? WeakMap : FakeMap;
  * @param {Mixed} rightHandOperand
  * @param {MemoizeMap} memoizeMap
  * @returns {Boolean|null} result
-*/ function memoizeCompare(leftHandOperand, rightHandOperand, memoizeMap) {
+*/ function $c5c85bd15edb785c$var$memoizeCompare(leftHandOperand, rightHandOperand, memoizeMap) {
     // Technically, WeakMap keys can *only* be objects, not primitives.
-    if (!memoizeMap || isPrimitive(leftHandOperand) || isPrimitive(rightHandOperand)) return null;
+    if (!memoizeMap || $c5c85bd15edb785c$var$isPrimitive(leftHandOperand) || $c5c85bd15edb785c$var$isPrimitive(rightHandOperand)) return null;
     var leftHandMap = memoizeMap.get(leftHandOperand);
     if (leftHandMap) {
         var result = leftHandMap.get(rightHandOperand);
@@ -7844,21 +7673,21 @@ var MemoizeMap = typeof WeakMap === 'function' ? WeakMap : FakeMap;
  * @param {Mixed} rightHandOperand
  * @param {MemoizeMap} memoizeMap
  * @param {Boolean} result
-*/ function memoizeSet(leftHandOperand, rightHandOperand, memoizeMap, result) {
+*/ function $c5c85bd15edb785c$var$memoizeSet(leftHandOperand, rightHandOperand, memoizeMap, result) {
     // Technically, WeakMap keys can *only* be objects, not primitives.
-    if (!memoizeMap || isPrimitive(leftHandOperand) || isPrimitive(rightHandOperand)) return;
+    if (!memoizeMap || $c5c85bd15edb785c$var$isPrimitive(leftHandOperand) || $c5c85bd15edb785c$var$isPrimitive(rightHandOperand)) return;
     var leftHandMap = memoizeMap.get(leftHandOperand);
     if (leftHandMap) leftHandMap.set(rightHandOperand, result);
     else {
-        leftHandMap = new MemoizeMap();
+        leftHandMap = new $c5c85bd15edb785c$var$MemoizeMap();
         leftHandMap.set(rightHandOperand, result);
         memoizeMap.set(leftHandOperand, leftHandMap);
     }
 }
 /*!
  * Primary Export
- */ module.exports = deepEqual;
-module.exports.MemoizeMap = MemoizeMap;
+ */ module.exports = $c5c85bd15edb785c$var$deepEqual;
+module.exports.MemoizeMap = $c5c85bd15edb785c$var$MemoizeMap;
 /**
  * Assert deeply nested sameValue equality between two objects of any type.
  *
@@ -7870,20 +7699,20 @@ module.exports.MemoizeMap = MemoizeMap;
     complex objects for a speed boost. By passing `false` you can disable memoization, but this will cause circular
     references to blow the stack.
  * @return {Boolean} equal match
- */ function deepEqual(leftHandOperand, rightHandOperand, options) {
+ */ function $c5c85bd15edb785c$var$deepEqual(leftHandOperand, rightHandOperand, options) {
     // If we have a comparator, we can't assume anything; so bail to its check first.
-    if (options && options.comparator) return extensiveDeepEqual(leftHandOperand, rightHandOperand, options);
-    var simpleResult = simpleEqual(leftHandOperand, rightHandOperand);
+    if (options && options.comparator) return $c5c85bd15edb785c$var$extensiveDeepEqual(leftHandOperand, rightHandOperand, options);
+    var simpleResult = $c5c85bd15edb785c$var$simpleEqual(leftHandOperand, rightHandOperand);
     if (simpleResult !== null) return simpleResult;
     // Deeper comparisons are pushed through to a larger function
-    return extensiveDeepEqual(leftHandOperand, rightHandOperand, options);
+    return $c5c85bd15edb785c$var$extensiveDeepEqual(leftHandOperand, rightHandOperand, options);
 }
 /**
  * Many comparisons can be canceled out early via simple equality or primitive checks.
  * @param {Mixed} leftHandOperand
  * @param {Mixed} rightHandOperand
  * @return {Boolean|null} equal match
- */ function simpleEqual(leftHandOperand, rightHandOperand) {
+ */ function $c5c85bd15edb785c$var$simpleEqual(leftHandOperand, rightHandOperand) {
     // Equal references (except for Numbers) can be returned early
     if (leftHandOperand === rightHandOperand) // Handle +-0 cases
     return leftHandOperand !== 0 || 1 / leftHandOperand === 1 / rightHandOperand;
@@ -7892,7 +7721,7 @@ module.exports.MemoizeMap = MemoizeMap;
     ) return true;
     // Anything that is not an 'object', i.e. symbols, functions, booleans, numbers,
     // strings, and undefined, can be compared by reference.
-    if (isPrimitive(leftHandOperand) || isPrimitive(rightHandOperand)) // Easy out b/c it would have passed the first equality check
+    if ($c5c85bd15edb785c$var$isPrimitive(leftHandOperand) || $c5c85bd15edb785c$var$isPrimitive(rightHandOperand)) // Easy out b/c it would have passed the first equality check
     return false;
     return null;
 }
@@ -7907,49 +7736,49 @@ module.exports.MemoizeMap = MemoizeMap;
     complex objects for a speed boost. By passing `false` you can disable memoization, but this will cause circular
     references to blow the stack.
  * @return {Boolean} equal match
-*/ function extensiveDeepEqual(leftHandOperand, rightHandOperand, options) {
+*/ function $c5c85bd15edb785c$var$extensiveDeepEqual(leftHandOperand, rightHandOperand, options) {
     options = options || {
     };
-    options.memoize = options.memoize === false ? false : options.memoize || new MemoizeMap();
+    options.memoize = options.memoize === false ? false : options.memoize || new $c5c85bd15edb785c$var$MemoizeMap();
     var comparator = options && options.comparator;
     // Check if a memoized result exists.
-    var memoizeResultLeft = memoizeCompare(leftHandOperand, rightHandOperand, options.memoize);
+    var memoizeResultLeft = $c5c85bd15edb785c$var$memoizeCompare(leftHandOperand, rightHandOperand, options.memoize);
     if (memoizeResultLeft !== null) return memoizeResultLeft;
-    var memoizeResultRight = memoizeCompare(rightHandOperand, leftHandOperand, options.memoize);
+    var memoizeResultRight = $c5c85bd15edb785c$var$memoizeCompare(rightHandOperand, leftHandOperand, options.memoize);
     if (memoizeResultRight !== null) return memoizeResultRight;
     // If a comparator is present, use it.
     if (comparator) {
         var comparatorResult = comparator(leftHandOperand, rightHandOperand);
         // Comparators may return null, in which case we want to go back to default behavior.
         if (comparatorResult === false || comparatorResult === true) {
-            memoizeSet(leftHandOperand, rightHandOperand, options.memoize, comparatorResult);
+            $c5c85bd15edb785c$var$memoizeSet(leftHandOperand, rightHandOperand, options.memoize, comparatorResult);
             return comparatorResult;
         }
         // To allow comparators to override *any* behavior, we ran them first. Since it didn't decide
         // what to do, we need to make sure to return the basic tests first before we move on.
-        var simpleResult = simpleEqual(leftHandOperand, rightHandOperand);
+        var simpleResult = $c5c85bd15edb785c$var$simpleEqual(leftHandOperand, rightHandOperand);
         if (simpleResult !== null) // Don't memoize this, it takes longer to set/retrieve than to just compare.
         return simpleResult;
     }
-    var leftHandType = type(leftHandOperand);
-    if (leftHandType !== type(rightHandOperand)) {
-        memoizeSet(leftHandOperand, rightHandOperand, options.memoize, false);
+    var leftHandType = $9skhJ(leftHandOperand);
+    if (leftHandType !== $9skhJ(rightHandOperand)) {
+        $c5c85bd15edb785c$var$memoizeSet(leftHandOperand, rightHandOperand, options.memoize, false);
         return false;
     }
     // Temporarily set the operands in the memoize object to prevent blowing the stack
-    memoizeSet(leftHandOperand, rightHandOperand, options.memoize, true);
-    var result = extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandType, options);
-    memoizeSet(leftHandOperand, rightHandOperand, options.memoize, result);
+    $c5c85bd15edb785c$var$memoizeSet(leftHandOperand, rightHandOperand, options.memoize, true);
+    var result = $c5c85bd15edb785c$var$extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandType, options);
+    $c5c85bd15edb785c$var$memoizeSet(leftHandOperand, rightHandOperand, options.memoize, result);
     return result;
 }
-function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandType, options) {
+function $c5c85bd15edb785c$var$extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandType, options) {
     switch(leftHandType){
         case 'String':
         case 'Number':
         case 'Boolean':
         case 'Date':
             // If these types are their instance types (e.g. `new Number`) then re-deepEqual against their values
-            return deepEqual(leftHandOperand.valueOf(), rightHandOperand.valueOf());
+            return $c5c85bd15edb785c$var$deepEqual(leftHandOperand.valueOf(), rightHandOperand.valueOf());
         case 'Promise':
         case 'Symbol':
         case 'function':
@@ -7968,21 +7797,21 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
         case 'Float32Array':
         case 'Float64Array':
         case 'Array':
-            return iterableEqual(leftHandOperand, rightHandOperand, options);
+            return $c5c85bd15edb785c$var$iterableEqual(leftHandOperand, rightHandOperand, options);
         case 'RegExp':
-            return regexpEqual(leftHandOperand, rightHandOperand);
+            return $c5c85bd15edb785c$var$regexpEqual(leftHandOperand, rightHandOperand);
         case 'Generator':
-            return generatorEqual(leftHandOperand, rightHandOperand, options);
+            return $c5c85bd15edb785c$var$generatorEqual(leftHandOperand, rightHandOperand, options);
         case 'DataView':
-            return iterableEqual(new Uint8Array(leftHandOperand.buffer), new Uint8Array(rightHandOperand.buffer), options);
+            return $c5c85bd15edb785c$var$iterableEqual(new Uint8Array(leftHandOperand.buffer), new Uint8Array(rightHandOperand.buffer), options);
         case 'ArrayBuffer':
-            return iterableEqual(new Uint8Array(leftHandOperand), new Uint8Array(rightHandOperand), options);
+            return $c5c85bd15edb785c$var$iterableEqual(new Uint8Array(leftHandOperand), new Uint8Array(rightHandOperand), options);
         case 'Set':
-            return entriesEqual(leftHandOperand, rightHandOperand, options);
+            return $c5c85bd15edb785c$var$entriesEqual(leftHandOperand, rightHandOperand, options);
         case 'Map':
-            return entriesEqual(leftHandOperand, rightHandOperand, options);
+            return $c5c85bd15edb785c$var$entriesEqual(leftHandOperand, rightHandOperand, options);
         default:
-            return objectEqual(leftHandOperand, rightHandOperand, options);
+            return $c5c85bd15edb785c$var$objectEqual(leftHandOperand, rightHandOperand, options);
     }
 }
 /*!
@@ -7991,7 +7820,7 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  * @param {RegExp} leftHandOperand
  * @param {RegExp} rightHandOperand
  * @return {Boolean} result
- */ function regexpEqual(leftHandOperand, rightHandOperand) {
+ */ function $c5c85bd15edb785c$var$regexpEqual(leftHandOperand, rightHandOperand) {
     return leftHandOperand.toString() === rightHandOperand.toString();
 }
 /*!
@@ -8001,7 +7830,7 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  * @param {Set} rightHandOperand
  * @param {Object} [options] (Optional)
  * @return {Boolean} result
- */ function entriesEqual(leftHandOperand, rightHandOperand, options) {
+ */ function $c5c85bd15edb785c$var$entriesEqual(leftHandOperand, rightHandOperand, options) {
     // IE11 doesn't support Set#entries or Set#@@iterator, so we need manually populate using Set#forEach
     if (leftHandOperand.size !== rightHandOperand.size) return false;
     if (leftHandOperand.size === 0) return true;
@@ -8019,7 +7848,7 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
             value
         ]);
     });
-    return iterableEqual(leftHandItems.sort(), rightHandItems.sort(), options);
+    return $c5c85bd15edb785c$var$iterableEqual(leftHandItems.sort(), rightHandItems.sort(), options);
 }
 /*!
  * Simple equality for flat iterable objects such as Arrays, TypedArrays or Node.js buffers.
@@ -8028,13 +7857,13 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  * @param {Iterable} rightHandOperand
  * @param {Object} [options] (Optional)
  * @return {Boolean} result
- */ function iterableEqual(leftHandOperand, rightHandOperand, options) {
+ */ function $c5c85bd15edb785c$var$iterableEqual(leftHandOperand, rightHandOperand, options) {
     var length = leftHandOperand.length;
     if (length !== rightHandOperand.length) return false;
     if (length === 0) return true;
     var index = -1;
     while(++index < length){
-        if (deepEqual(leftHandOperand[index], rightHandOperand[index], options) === false) return false;
+        if ($c5c85bd15edb785c$var$deepEqual(leftHandOperand[index], rightHandOperand[index], options) === false) return false;
     }
     return true;
 }
@@ -8045,15 +7874,15 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  * @param {Iterable} rightHandOperand
  * @param {Object} [options] (Optional)
  * @return {Boolean} result
- */ function generatorEqual(leftHandOperand, rightHandOperand, options) {
-    return iterableEqual(getGeneratorEntries(leftHandOperand), getGeneratorEntries(rightHandOperand), options);
+ */ function $c5c85bd15edb785c$var$generatorEqual(leftHandOperand, rightHandOperand, options) {
+    return $c5c85bd15edb785c$var$iterableEqual($c5c85bd15edb785c$var$getGeneratorEntries(leftHandOperand), $c5c85bd15edb785c$var$getGeneratorEntries(rightHandOperand), options);
 }
 /*!
  * Determine if the given object has an @@iterator function.
  *
  * @param {Object} target
  * @return {Boolean} `true` if the object has an @@iterator function.
- */ function hasIteratorFunction(target) {
+ */ function $c5c85bd15edb785c$var$hasIteratorFunction(target) {
     return typeof Symbol !== 'undefined' && typeof target === 'object' && typeof Symbol.iterator !== 'undefined' && typeof target[Symbol.iterator] === 'function';
 }
 /*!
@@ -8062,9 +7891,9 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  *
  * @param {Object} target
  * @returns {Array} an array of entries from the @@iterator function
- */ function getIteratorEntries(target) {
-    if (hasIteratorFunction(target)) try {
-        return getGeneratorEntries(target[Symbol.iterator]());
+ */ function $c5c85bd15edb785c$var$getIteratorEntries(target) {
+    if ($c5c85bd15edb785c$var$hasIteratorFunction(target)) try {
+        return $c5c85bd15edb785c$var$getGeneratorEntries(target[Symbol.iterator]());
     } catch (iteratorError) {
         return [];
     }
@@ -8075,7 +7904,7 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  *
  * @param {Generator} target
  * @returns {Array} an array of entries from the Generator.
- */ function getGeneratorEntries(generator) {
+ */ function $c5c85bd15edb785c$var$getGeneratorEntries(generator) {
     var generatorResult = generator.next();
     var accumulator = [
         generatorResult.value
@@ -8091,7 +7920,7 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  *
  * @param {Object} target
  * @returns {Array} an array of own and inherited enumerable keys from the target.
- */ function getEnumerableKeys(target) {
+ */ function $c5c85bd15edb785c$var$getEnumerableKeys(target) {
     var keys = [];
     for(var key in target)keys.push(key);
     return keys;
@@ -8105,11 +7934,11 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  * @param {Array} keys An array of keys to compare the values of leftHandOperand and rightHandOperand against
  * @param {Object} [options] (Optional)
  * @return {Boolean} result
- */ function keysEqual(leftHandOperand, rightHandOperand, keys, options) {
+ */ function $c5c85bd15edb785c$var$keysEqual(leftHandOperand, rightHandOperand, keys, options) {
     var length = keys.length;
     if (length === 0) return true;
     for(var i = 0; i < length; i += 1){
-        if (deepEqual(leftHandOperand[keys[i]], rightHandOperand[keys[i]], options) === false) return false;
+        if ($c5c85bd15edb785c$var$deepEqual(leftHandOperand[keys[i]], rightHandOperand[keys[i]], options) === false) return false;
     }
     return true;
 }
@@ -8121,21 +7950,21 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  * @param {Mixed} rightHandOperand
  * @param {Object} [options] (Optional)
  * @return {Boolean} result
- */ function objectEqual(leftHandOperand, rightHandOperand, options) {
-    var leftHandKeys = getEnumerableKeys(leftHandOperand);
-    var rightHandKeys = getEnumerableKeys(rightHandOperand);
+ */ function $c5c85bd15edb785c$var$objectEqual(leftHandOperand, rightHandOperand, options) {
+    var leftHandKeys = $c5c85bd15edb785c$var$getEnumerableKeys(leftHandOperand);
+    var rightHandKeys = $c5c85bd15edb785c$var$getEnumerableKeys(rightHandOperand);
     if (leftHandKeys.length && leftHandKeys.length === rightHandKeys.length) {
         leftHandKeys.sort();
         rightHandKeys.sort();
-        if (iterableEqual(leftHandKeys, rightHandKeys) === false) return false;
-        return keysEqual(leftHandOperand, rightHandOperand, leftHandKeys, options);
+        if ($c5c85bd15edb785c$var$iterableEqual(leftHandKeys, rightHandKeys) === false) return false;
+        return $c5c85bd15edb785c$var$keysEqual(leftHandOperand, rightHandOperand, leftHandKeys, options);
     }
-    var leftHandEntries = getIteratorEntries(leftHandOperand);
-    var rightHandEntries = getIteratorEntries(rightHandOperand);
+    var leftHandEntries = $c5c85bd15edb785c$var$getIteratorEntries(leftHandOperand);
+    var rightHandEntries = $c5c85bd15edb785c$var$getIteratorEntries(rightHandOperand);
     if (leftHandEntries.length && leftHandEntries.length === rightHandEntries.length) {
         leftHandEntries.sort();
         rightHandEntries.sort();
-        return iterableEqual(leftHandEntries, rightHandEntries, options);
+        return $c5c85bd15edb785c$var$iterableEqual(leftHandEntries, rightHandEntries, options);
     }
     if (leftHandKeys.length === 0 && leftHandEntries.length === 0 && rightHandKeys.length === 0 && rightHandEntries.length === 0) return true;
     return false;
@@ -8148,19 +7977,21 @@ function extensiveDeepEqualByType(leftHandOperand, rightHandOperand, leftHandTyp
  *
  * @param {Mixed} value
  * @return {Boolean} result
- */ function isPrimitive(value) {
+ */ function $c5c85bd15edb785c$var$isPrimitive(value) {
     return value === null || typeof value !== 'object';
 }
 
-},{"type-detect":"fBV4L"}],"buORk":[function(require,module,exports) {
-/*!
- * Chai - addProperty utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ var chai = require('../../chai');
-var flag = require('./flag');
-var isProxyEnabled = require('./isProxyEnabled');
-var transferFlags = require('./transferFlags');
+});
+
+parcelRequire.register("hnLju", function(module, exports) {
+
+var $7WE3w = parcelRequire("7WE3w");
+
+var $e2AW3 = parcelRequire("e2AW3");
+
+var $l9aQx = parcelRequire("l9aQx");
+
+var $hn7ck = parcelRequire("hn7ck");
 /**
  * ### .addProperty(ctx, name, getter)
  *
@@ -8205,19 +8036,21 @@ var transferFlags = require('./transferFlags');
             //
             // If proxy protection is enabled, then the `ssfi` flag has already been
             // set by the proxy getter.
-            if (!isProxyEnabled() && !flag(this, 'lockSsfi')) flag(this, 'ssfi', propertyGetter);
+            if (!$l9aQx() && !$e2AW3(this, 'lockSsfi')) $e2AW3(this, 'ssfi', propertyGetter);
             var result = getter.call(this);
             if (result !== undefined) return result;
-            var newAssertion = new chai.Assertion();
-            transferFlags(this, newAssertion);
+            var newAssertion = new $7WE3w.Assertion();
+            $hn7ck(this, newAssertion);
             return newAssertion;
         },
         configurable: true
     });
 };
 
-},{"../../chai":"ibVV2","./flag":"8xax6","./isProxyEnabled":"exZmD","./transferFlags":"6t06f"}],"exZmD":[function(require,module,exports) {
-var config = require('../config');
+});
+parcelRequire.register("l9aQx", function(module, exports) {
+
+var $idGob = parcelRequire("idGob");
 /*!
  * Chai - isProxyEnabled helper
  * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
@@ -8232,19 +8065,23 @@ var config = require('../config');
  * @namespace Utils
  * @name isProxyEnabled
  */ module.exports = function isProxyEnabled() {
-    return config.useProxy && typeof Proxy !== 'undefined' && typeof Reflect !== 'undefined';
+    return $idGob.useProxy && typeof Proxy !== 'undefined' && typeof Reflect !== 'undefined';
 };
 
-},{"../config":"aLW00"}],"jgtLI":[function(require,module,exports) {
-/*!
- * Chai - addMethod utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ var addLengthGuard = require('./addLengthGuard');
-var chai = require('../../chai');
-var flag = require('./flag');
-var proxify = require('./proxify');
-var transferFlags = require('./transferFlags');
+});
+
+
+parcelRequire.register("dwEIq", function(module, exports) {
+
+var $cgAzM = parcelRequire("cgAzM");
+
+var $7WE3w = parcelRequire("7WE3w");
+
+var $e2AW3 = parcelRequire("e2AW3");
+
+var $ggytc = parcelRequire("ggytc");
+
+var $hn7ck = parcelRequire("hn7ck");
 /**
  * ### .addMethod(ctx, name, method)
  *
@@ -8283,19 +8120,20 @@ var transferFlags = require('./transferFlags');
         // inside of another assertion. In the first case, the `ssfi` flag has
         // already been set by the overwriting assertion. In the second case, the
         // `ssfi` flag has already been set by the outer assertion.
-        if (!flag(this, 'lockSsfi')) flag(this, 'ssfi', methodWrapper);
+        if (!$e2AW3(this, 'lockSsfi')) $e2AW3(this, 'ssfi', methodWrapper);
         var result = method.apply(this, arguments);
         if (result !== undefined) return result;
-        var newAssertion = new chai.Assertion();
-        transferFlags(this, newAssertion);
+        var newAssertion = new $7WE3w.Assertion();
+        $hn7ck(this, newAssertion);
         return newAssertion;
     };
-    addLengthGuard(methodWrapper, name, false);
-    ctx[name] = proxify(methodWrapper, name);
+    $cgAzM(methodWrapper, name, false);
+    ctx[name] = $ggytc(methodWrapper, name);
 };
 
-},{"./addLengthGuard":"98Lls","../../chai":"ibVV2","./flag":"8xax6","./proxify":"3SIVj","./transferFlags":"6t06f"}],"98Lls":[function(require,module,exports) {
-var fnLengthDesc = Object.getOwnPropertyDescriptor(function() {
+});
+parcelRequire.register("cgAzM", function(module, exports) {
+var $8ee359e8d905f448$var$fnLengthDesc = Object.getOwnPropertyDescriptor(function() {
 }, 'length');
 /*!
  * Chai - addLengthGuard utility
@@ -8334,7 +8172,7 @@ var fnLengthDesc = Object.getOwnPropertyDescriptor(function() {
  * @namespace Utils
  * @name addLengthGuard
  */ module.exports = function addLengthGuard(fn, assertionName, isChainable) {
-    if (!fnLengthDesc.configurable) return fn;
+    if (!$8ee359e8d905f448$var$fnLengthDesc.configurable) return fn;
     Object.defineProperty(fn, 'length', {
         get: function() {
             if (isChainable) throw Error('Invalid Chai property: ' + assertionName + '.length. Due' + ' to a compatibility issue, "length" cannot directly follow "' + assertionName + '". Use "' + assertionName + '.lengthOf" instead.');
@@ -8344,11 +8182,17 @@ var fnLengthDesc = Object.getOwnPropertyDescriptor(function() {
     return fn;
 };
 
-},{}],"3SIVj":[function(require,module,exports) {
-var config = require('../config');
-var flag = require('./flag');
-var getProperties = require('./getProperties');
-var isProxyEnabled = require('./isProxyEnabled');
+});
+
+parcelRequire.register("ggytc", function(module, exports) {
+
+var $idGob = parcelRequire("idGob");
+
+var $e2AW3 = parcelRequire("e2AW3");
+
+var $b49ZH = parcelRequire("b49ZH");
+
+var $l9aQx = parcelRequire("l9aQx");
 /*!
  * Chai - proxify utility
  * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
@@ -8370,21 +8214,21 @@ var isProxyEnabled = require('./isProxyEnabled');
  * @param {String} nonChainableMethodName
  * @namespace Utils
  * @name proxify
- */ var builtins = [
+ */ var $bd78e100a2a383f4$var$builtins = [
     '__flags',
     '__methods',
     '_obj',
     'assert'
 ];
 module.exports = function proxify(obj, nonChainableMethodName) {
-    if (!isProxyEnabled()) return obj;
+    if (!$l9aQx()) return obj;
     return new Proxy(obj, {
         get: function proxyGetter(target, property) {
             // This check is here because we should not throw errors on Symbol properties
             // such as `Symbol.toStringTag`.
             // The values for which an error should be thrown can be configured using
             // the `config.proxyExcludedKeys` setting.
-            if (typeof property === 'string' && config.proxyExcludedKeys.indexOf(property) === -1 && !Reflect.has(target, property)) {
+            if (typeof property === 'string' && $idGob.proxyExcludedKeys.indexOf(property) === -1 && !Reflect.has(target, property)) {
                 // Special message for invalid property access of non-chainable methods.
                 if (nonChainableMethodName) throw Error('Invalid Chai property: ' + nonChainableMethodName + '.' + property + '. See docs for proper usage of "' + nonChainableMethodName + '".');
                 // If the property is reasonably close to an existing Chai property,
@@ -8392,9 +8236,9 @@ module.exports = function proxify(obj, nonChainableMethodName) {
                 // distance less than 4.
                 var suggestion = null;
                 var suggestionDistance = 4;
-                getProperties(target).forEach(function(prop) {
-                    if (!Object.prototype.hasOwnProperty(prop) && builtins.indexOf(prop) === -1) {
-                        var dist = stringDistanceCapped(property, prop, suggestionDistance);
+                $b49ZH(target).forEach(function(prop) {
+                    if (!Object.prototype.hasOwnProperty(prop) && $bd78e100a2a383f4$var$builtins.indexOf(prop) === -1) {
+                        var dist = $bd78e100a2a383f4$var$stringDistanceCapped(property, prop, suggestionDistance);
                         if (dist < suggestionDistance) {
                             suggestion = prop;
                             suggestionDistance = dist;
@@ -8416,7 +8260,7 @@ module.exports = function proxify(obj, nonChainableMethodName) {
             // if the `lockSsfi` flag is set, thus indicating that this assertion is
             // being called from within another assertion. In that case, the `ssfi`
             // flag is already set to the outer assertion's starting point.
-            if (builtins.indexOf(property) === -1 && !flag(target, 'lockSsfi')) flag(target, 'ssfi', proxyGetter);
+            if ($bd78e100a2a383f4$var$builtins.indexOf(property) === -1 && !$e2AW3(target, 'lockSsfi')) $e2AW3(target, 'ssfi', proxyGetter);
             return Reflect.get(target, property);
         }
     });
@@ -8429,7 +8273,7 @@ module.exports = function proxify(obj, nonChainableMethodName) {
  * @param {number} number
  * @return {number} min(string distance between strA and strB, cap)
  * @api private
- */ function stringDistanceCapped(strA, strB, cap) {
+ */ function $bd78e100a2a383f4$var$stringDistanceCapped(strA, strB, cap) {
     if (Math.abs(strA.length - strB.length) >= cap) return cap;
     var memo = [];
     // `memo` is a two-dimensional array containing distances.
@@ -8453,15 +8297,18 @@ module.exports = function proxify(obj, nonChainableMethodName) {
     return memo[strA.length][strB.length];
 }
 
-},{"../config":"aLW00","./flag":"8xax6","./getProperties":"4XrIS","./isProxyEnabled":"exZmD"}],"5ejjg":[function(require,module,exports) {
-/*!
- * Chai - overwriteProperty utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ var chai = require('../../chai');
-var flag = require('./flag');
-var isProxyEnabled = require('./isProxyEnabled');
-var transferFlags = require('./transferFlags');
+});
+
+
+parcelRequire.register("7Wk5I", function(module, exports) {
+
+var $7WE3w = parcelRequire("7WE3w");
+
+var $e2AW3 = parcelRequire("e2AW3");
+
+var $l9aQx = parcelRequire("l9aQx");
+
+var $hn7ck = parcelRequire("hn7ck");
 /**
  * ### .overwriteProperty(ctx, name, fn)
  *
@@ -8515,33 +8362,36 @@ var transferFlags = require('./transferFlags');
             //
             // If proxy protection is enabled, then the `ssfi` flag has already been
             // set by the proxy getter.
-            if (!isProxyEnabled() && !flag(this, 'lockSsfi')) flag(this, 'ssfi', overwritingPropertyGetter);
+            if (!$l9aQx() && !$e2AW3(this, 'lockSsfi')) $e2AW3(this, 'ssfi', overwritingPropertyGetter);
             // Setting the `lockSsfi` flag to `true` prevents the overwritten
             // assertion from changing the `ssfi` flag. By this point, the `ssfi`
             // flag is already set to the correct starting point for this assertion.
-            var origLockSsfi = flag(this, 'lockSsfi');
-            flag(this, 'lockSsfi', true);
+            var origLockSsfi = $e2AW3(this, 'lockSsfi');
+            $e2AW3(this, 'lockSsfi', true);
             var result = getter(_super).call(this);
-            flag(this, 'lockSsfi', origLockSsfi);
+            $e2AW3(this, 'lockSsfi', origLockSsfi);
             if (result !== undefined) return result;
-            var newAssertion = new chai.Assertion();
-            transferFlags(this, newAssertion);
+            var newAssertion = new $7WE3w.Assertion();
+            $hn7ck(this, newAssertion);
             return newAssertion;
         },
         configurable: true
     });
 };
 
-},{"../../chai":"ibVV2","./flag":"8xax6","./isProxyEnabled":"exZmD","./transferFlags":"6t06f"}],"4HXJM":[function(require,module,exports) {
-/*!
- * Chai - overwriteMethod utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ var addLengthGuard = require('./addLengthGuard');
-var chai = require('../../chai');
-var flag = require('./flag');
-var proxify = require('./proxify');
-var transferFlags = require('./transferFlags');
+});
+
+parcelRequire.register("l2kSg", function(module, exports) {
+
+var $cgAzM = parcelRequire("cgAzM");
+
+var $7WE3w = parcelRequire("7WE3w");
+
+var $e2AW3 = parcelRequire("e2AW3");
+
+var $ggytc = parcelRequire("ggytc");
+
+var $hn7ck = parcelRequire("hn7ck");
 /**
  * ### .overwriteMethod(ctx, name, fn)
  *
@@ -8592,45 +8442,46 @@ var transferFlags = require('./transferFlags');
         // inside of another assertion. In the first case, the `ssfi` flag has
         // already been set by the overwriting assertion. In the second case, the
         // `ssfi` flag has already been set by the outer assertion.
-        if (!flag(this, 'lockSsfi')) flag(this, 'ssfi', overwritingMethodWrapper);
+        if (!$e2AW3(this, 'lockSsfi')) $e2AW3(this, 'ssfi', overwritingMethodWrapper);
         // Setting the `lockSsfi` flag to `true` prevents the overwritten assertion
         // from changing the `ssfi` flag. By this point, the `ssfi` flag is already
         // set to the correct starting point for this assertion.
-        var origLockSsfi = flag(this, 'lockSsfi');
-        flag(this, 'lockSsfi', true);
+        var origLockSsfi = $e2AW3(this, 'lockSsfi');
+        $e2AW3(this, 'lockSsfi', true);
         var result = method(_super).apply(this, arguments);
-        flag(this, 'lockSsfi', origLockSsfi);
+        $e2AW3(this, 'lockSsfi', origLockSsfi);
         if (result !== undefined) return result;
-        var newAssertion = new chai.Assertion();
-        transferFlags(this, newAssertion);
+        var newAssertion = new $7WE3w.Assertion();
+        $hn7ck(this, newAssertion);
         return newAssertion;
     };
-    addLengthGuard(overwritingMethodWrapper, name, false);
-    ctx[name] = proxify(overwritingMethodWrapper, name);
+    $cgAzM(overwritingMethodWrapper, name, false);
+    ctx[name] = $ggytc(overwritingMethodWrapper, name);
 };
 
-},{"./addLengthGuard":"98Lls","../../chai":"ibVV2","./flag":"8xax6","./proxify":"3SIVj","./transferFlags":"6t06f"}],"9DCBd":[function(require,module,exports) {
-/*!
- * Chai - addChainingMethod utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ /*!
- * Module dependencies
- */ var addLengthGuard = require('./addLengthGuard');
-var chai = require('../../chai');
-var flag = require('./flag');
-var proxify = require('./proxify');
-var transferFlags = require('./transferFlags');
+});
+
+parcelRequire.register("bpUiI", function(module, exports) {
+
+var $cgAzM = parcelRequire("cgAzM");
+
+var $7WE3w = parcelRequire("7WE3w");
+
+var $e2AW3 = parcelRequire("e2AW3");
+
+var $ggytc = parcelRequire("ggytc");
+
+var $hn7ck = parcelRequire("hn7ck");
 /*!
  * Module variables
  */ // Check whether `Object.setPrototypeOf` is supported
-var canSetPrototype = typeof Object.setPrototypeOf === 'function';
+var $84fdb3ab123a9da5$var$canSetPrototype = typeof Object.setPrototypeOf === 'function';
 // Without `Object.setPrototypeOf` support, this module will need to add properties to a function.
 // However, some of functions' own props are not configurable and should be skipped.
-var testFn = function() {
+var $84fdb3ab123a9da5$var$testFn = function() {
 };
-var excludeNames = Object.getOwnPropertyNames(testFn).filter(function(name) {
-    var propDesc = Object.getOwnPropertyDescriptor(testFn, name);
+var $84fdb3ab123a9da5$var$excludeNames = Object.getOwnPropertyNames($84fdb3ab123a9da5$var$testFn).filter(function(name) {
+    var propDesc = Object.getOwnPropertyDescriptor($84fdb3ab123a9da5$var$testFn, name);
     // Note: PhantomJS 1.x includes `callee` as one of `testFn`'s own properties,
     // but then returns `undefined` as the property descriptor for `callee`. As a
     // workaround, we perform an otherwise unnecessary type-check for `propDesc`,
@@ -8639,7 +8490,7 @@ var excludeNames = Object.getOwnPropertyNames(testFn).filter(function(name) {
     return !propDesc.configurable;
 });
 // Cache `Function` properties
-var call = Function.prototype.call, apply = Function.prototype.apply;
+var $84fdb3ab123a9da5$var$call = Function.prototype.call, $84fdb3ab123a9da5$var$apply = Function.prototype.apply;
 /**
  * ### .addChainableMethod(ctx, name, method, chainingBehavior)
  *
@@ -8697,44 +8548,44 @@ var call = Function.prototype.call, apply = Function.prototype.apply;
                 // methods in `ctx.__methods` instead of completely replacing the
                 // overwritten assertion. Therefore, an overwriting assertion won't
                 // set the `ssfi` or `lockSsfi` flags.
-                if (!flag(this, 'lockSsfi')) flag(this, 'ssfi', chainableMethodWrapper);
+                if (!$e2AW3(this, 'lockSsfi')) $e2AW3(this, 'ssfi', chainableMethodWrapper);
                 var result = chainableBehavior.method.apply(this, arguments);
                 if (result !== undefined) return result;
-                var newAssertion = new chai.Assertion();
-                transferFlags(this, newAssertion);
+                var newAssertion = new $7WE3w.Assertion();
+                $hn7ck(this, newAssertion);
                 return newAssertion;
             };
-            addLengthGuard(chainableMethodWrapper, name, true);
+            $cgAzM(chainableMethodWrapper, name, true);
             // Use `Object.setPrototypeOf` if available
-            if (canSetPrototype) {
+            if ($84fdb3ab123a9da5$var$canSetPrototype) {
                 // Inherit all properties from the object by replacing the `Function` prototype
                 var prototype = Object.create(this);
                 // Restore the `call` and `apply` methods from `Function`
-                prototype.call = call;
-                prototype.apply = apply;
+                prototype.call = $84fdb3ab123a9da5$var$call;
+                prototype.apply = $84fdb3ab123a9da5$var$apply;
                 Object.setPrototypeOf(chainableMethodWrapper, prototype);
             } else {
                 var asserterNames = Object.getOwnPropertyNames(ctx);
                 asserterNames.forEach(function(asserterName) {
-                    if (excludeNames.indexOf(asserterName) !== -1) return;
+                    if ($84fdb3ab123a9da5$var$excludeNames.indexOf(asserterName) !== -1) return;
                     var pd = Object.getOwnPropertyDescriptor(ctx, asserterName);
                     Object.defineProperty(chainableMethodWrapper, asserterName, pd);
                 });
             }
-            transferFlags(this, chainableMethodWrapper);
-            return proxify(chainableMethodWrapper);
+            $hn7ck(this, chainableMethodWrapper);
+            return $ggytc(chainableMethodWrapper);
         },
         configurable: true
     });
 };
 
-},{"./addLengthGuard":"98Lls","../../chai":"ibVV2","./flag":"8xax6","./proxify":"3SIVj","./transferFlags":"6t06f"}],"iRfMs":[function(require,module,exports) {
-/*!
- * Chai - overwriteChainableMethod utility
- * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ var chai = require('../../chai');
-var transferFlags = require('./transferFlags');
+});
+
+parcelRequire.register("3aD7t", function(module, exports) {
+
+var $7WE3w = parcelRequire("7WE3w");
+
+var $hn7ck = parcelRequire("hn7ck");
 /**
  * ### .overwriteChainableMethod(ctx, name, method, chainingBehavior)
  *
@@ -8772,28 +8623,25 @@ var transferFlags = require('./transferFlags');
     chainableBehavior.chainingBehavior = function overwritingChainableMethodGetter() {
         var result = chainingBehavior(_chainingBehavior).call(this);
         if (result !== undefined) return result;
-        var newAssertion = new chai.Assertion();
-        transferFlags(this, newAssertion);
+        var newAssertion = new $7WE3w.Assertion();
+        $hn7ck(this, newAssertion);
         return newAssertion;
     };
     var _method = chainableBehavior.method;
     chainableBehavior.method = function overwritingChainableMethodWrapper() {
         var result = method(_method).apply(this, arguments);
         if (result !== undefined) return result;
-        var newAssertion = new chai.Assertion();
-        transferFlags(this, newAssertion);
+        var newAssertion = new $7WE3w.Assertion();
+        $hn7ck(this, newAssertion);
         return newAssertion;
     };
 };
 
-},{"../../chai":"ibVV2","./transferFlags":"6t06f"}],"jWO3x":[function(require,module,exports) {
-/*!
- * Chai - compareByInspect utility
- * Copyright(c) 2011-2016 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ /*!
- * Module dependencies
- */ var inspect = require('./inspect');
+});
+
+parcelRequire.register("1y7u2", function(module, exports) {
+
+var $igKev = parcelRequire("igKev");
 /**
  * ### .compareByInspect(mixed, mixed)
  *
@@ -8809,10 +8657,12 @@ var transferFlags = require('./transferFlags');
  * @namespace Utils
  * @api public
  */ module.exports = function compareByInspect(a, b) {
-    return inspect(a) < inspect(b) ? -1 : 1;
+    return $igKev(a) < $igKev(b) ? -1 : 1;
 };
 
-},{"./inspect":"4aOuP"}],"1OlqS":[function(require,module,exports) {
+});
+
+parcelRequire.register("ff869", function(module, exports) {
 /*!
  * Chai - getOwnEnumerablePropertySymbols utility
  * Copyright(c) 2011-2016 Jake Luer <jake@alogicalparadox.com>
@@ -8836,14 +8686,11 @@ var transferFlags = require('./transferFlags');
     });
 };
 
-},{}],"3kroT":[function(require,module,exports) {
-/*!
- * Chai - getOwnEnumerableProperties utility
- * Copyright(c) 2011-2016 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ /*!
- * Module dependencies
- */ var getOwnEnumerablePropertySymbols = require('./getOwnEnumerablePropertySymbols');
+});
+
+parcelRequire.register("bknm4", function(module, exports) {
+
+var $ff869 = parcelRequire("ff869");
 /**
  * ### .getOwnEnumerableProperties(object)
  *
@@ -8857,10 +8704,12 @@ var transferFlags = require('./transferFlags');
  * @name getOwnEnumerableProperties
  * @api public
  */ module.exports = function getOwnEnumerableProperties(obj) {
-    return Object.keys(obj).concat(getOwnEnumerablePropertySymbols(obj));
+    return Object.keys(obj).concat($ff869(obj));
 };
 
-},{"./getOwnEnumerablePropertySymbols":"1OlqS"}],"dD2IF":[function(require,module,exports) {
+});
+
+parcelRequire.register("2uRKw", function(module, exports) {
 'use strict';
 /* !
  * Chai - checkError utility
@@ -8884,7 +8733,7 @@ var transferFlags = require('./transferFlags');
  * @param {Error|ErrorConstructor} errorLike object to compare against
  * @namespace Utils
  * @api public
- */ function compatibleInstance(thrown, errorLike) {
+ */ function $1d18139df162ab82$var$compatibleInstance(thrown, errorLike) {
     return errorLike instanceof Error && thrown === errorLike;
 }
 /**
@@ -8901,7 +8750,7 @@ var transferFlags = require('./transferFlags');
  * @param {Error|ErrorConstructor} errorLike object to compare against
  * @namespace Utils
  * @api public
- */ function compatibleConstructor(thrown, errorLike) {
+ */ function $1d18139df162ab82$var$compatibleConstructor(thrown, errorLike) {
     if (errorLike instanceof Error) // If `errorLike` is an instance of any error we compare their constructors
     return thrown.constructor === errorLike.constructor || thrown instanceof errorLike.constructor;
     else if (errorLike.prototype instanceof Error || errorLike === Error) // If `errorLike` is a constructor that inherits from Error, we compare `thrown` to `errorLike` directly
@@ -8920,7 +8769,7 @@ var transferFlags = require('./transferFlags');
  * @param {String|RegExp} errMatcher to look for into the message
  * @namespace Utils
  * @api public
- */ function compatibleMessage(thrown, errMatcher) {
+ */ function $1d18139df162ab82$var$compatibleMessage(thrown, errMatcher) {
     var comparisonString = typeof thrown === 'string' ? thrown : thrown.message;
     if (errMatcher instanceof RegExp) return errMatcher.test(comparisonString);
     else if (typeof errMatcher === 'string') return comparisonString.indexOf(errMatcher) !== -1; // eslint-disable-line no-magic-numbers
@@ -8936,12 +8785,12 @@ var transferFlags = require('./transferFlags');
  * @param {Function} constructorFn
  * @namespace Utils
  * @api private
- */ var functionNameMatch = /\s*function(?:\s|\s*\/\*[^(?:*\/)]+\*\/\s*)*([^\(\/]+)/;
-function getFunctionName(constructorFn) {
+ */ var $1d18139df162ab82$var$functionNameMatch = /\s*function(?:\s|\s*\/\*[^(?:*\/)]+\*\/\s*)*([^\(\/]+)/;
+function $1d18139df162ab82$var$getFunctionName(constructorFn) {
     var name = '';
     if (typeof constructorFn.name === 'undefined') {
         // Here we run a polyfill if constructorFn.name is not defined
-        var match = String(constructorFn).match(functionNameMatch);
+        var match = String(constructorFn).match($1d18139df162ab82$var$functionNameMatch);
         if (match) name = match[1];
     } else name = constructorFn.name;
     return name;
@@ -8955,13 +8804,13 @@ function getFunctionName(constructorFn) {
  * @param {Error|ErrorConstructor} errorLike
  * @namespace Utils
  * @api public
- */ function getConstructorName(errorLike) {
+ */ function $1d18139df162ab82$var$getConstructorName(errorLike) {
     var constructorName = errorLike;
-    if (errorLike instanceof Error) constructorName = getFunctionName(errorLike.constructor);
+    if (errorLike instanceof Error) constructorName = $1d18139df162ab82$var$getFunctionName(errorLike.constructor);
     else if (typeof errorLike === 'function') // If `err` is not an instance of Error it is an error constructor itself or another function.
     // If we've got a common function we get its name, otherwise we may need to create a new instance
     // of the error just in case it's a poorly-constructed error. Please see chaijs/chai/issues/45 to know more.
-    constructorName = getFunctionName(errorLike).trim() || getFunctionName(new errorLike()); // eslint-disable-line new-cap
+    constructorName = $1d18139df162ab82$var$getFunctionName(errorLike).trim() || $1d18139df162ab82$var$getFunctionName(new errorLike()); // eslint-disable-line new-cap
     return constructorName;
 }
 /**
@@ -8975,21 +8824,23 @@ function getFunctionName(constructorFn) {
  * @param {Error|String} errorLike
  * @namespace Utils
  * @api public
- */ function getMessage(errorLike) {
+ */ function $1d18139df162ab82$var$getMessage(errorLike) {
     var msg = '';
     if (errorLike && errorLike.message) msg = errorLike.message;
     else if (typeof errorLike === 'string') msg = errorLike;
     return msg;
 }
 module.exports = {
-    compatibleInstance: compatibleInstance,
-    compatibleConstructor: compatibleConstructor,
-    compatibleMessage: compatibleMessage,
-    getMessage: getMessage,
-    getConstructorName: getConstructorName
+    compatibleInstance: $1d18139df162ab82$var$compatibleInstance,
+    compatibleConstructor: $1d18139df162ab82$var$compatibleConstructor,
+    compatibleMessage: $1d18139df162ab82$var$compatibleMessage,
+    getMessage: $1d18139df162ab82$var$getMessage,
+    getConstructorName: $1d18139df162ab82$var$getConstructorName
 };
 
-},{}],"01sjn":[function(require,module,exports) {
+});
+
+parcelRequire.register("i0HXH", function(module, exports) {
 /*!
  * Chai - isNaN utility
  * Copyright(c) 2012-2015 Sakthipriyan Vairamani <thechargingvolcano@gmail.com>
@@ -9004,19 +8855,23 @@ module.exports = {
  * @param {Value} The value which has to be checked if it is NaN
  * @name isNaN
  * @api private
- */ function isNaN(value) {
+ */ function $d1ca540488555f9c$var$isNaN(value) {
     // Refer http://www.ecma-international.org/ecma-262/6.0/#sec-isnan-number
     // section's NOTE.
     return value !== value;
 }
 // If ECMAScript 6's Number.isNaN is present, prefer that.
-module.exports = Number.isNaN || isNaN;
+module.exports = Number.isNaN || $d1ca540488555f9c$var$isNaN;
 
-},{}],"fNpYH":[function(require,module,exports) {
-var type = require('type-detect');
-var flag = require('./flag');
-function isObjectType(obj) {
-    var objectType = type(obj);
+});
+
+parcelRequire.register("8Vfa7", function(module, exports) {
+
+var $9skhJ = parcelRequire("9skhJ");
+
+var $e2AW3 = parcelRequire("e2AW3");
+function $67ef687a109e8d69$var$isObjectType(obj) {
+    var objectType = $9skhJ(obj);
     var objectTypes = [
         'Array',
         'Object',
@@ -9039,8 +8894,8 @@ function isObjectType(obj) {
  * @name getOperator
  * @api public
  */ module.exports = function getOperator(obj, args) {
-    var operator = flag(obj, 'operator');
-    var negate = flag(obj, 'negate');
+    var operator = $e2AW3(obj, 'operator');
+    var negate = $e2AW3(obj, 'negate');
     var expected = args[3];
     var msg = negate ? args[2] : args[1];
     if (operator) return operator;
@@ -9048,18 +8903,17 @@ function isObjectType(obj) {
     msg = msg || '';
     if (!msg) return undefined;
     if (/\shave\s/.test(msg)) return undefined;
-    var isObject = isObjectType(expected);
+    var isObject = $67ef687a109e8d69$var$isObjectType(expected);
     if (/\snot\s/.test(msg)) return isObject ? 'notDeepStrictEqual' : 'notStrictEqual';
     return isObject ? 'deepStrictEqual' : 'strictEqual';
 };
 
-},{"type-detect":"fBV4L","./flag":"8xax6"}],"l9XwH":[function(require,module,exports) {
-/*!
- * chai
- * http://chaijs.com
- * Copyright(c) 2011-2014 Jake Luer <jake@alogicalparadox.com>
- * MIT Licensed
- */ var config = require('./config');
+});
+
+
+parcelRequire.register("ilqqA", function(module, exports) {
+
+var $idGob = parcelRequire("idGob");
 module.exports = function(_chai, util) {
     /*!
    * Module dependencies.
@@ -9113,21 +8967,21 @@ module.exports = function(_chai, util) {
     Object.defineProperty(Assertion, 'includeStack', {
         get: function() {
             console.warn('Assertion.includeStack is deprecated, use chai.config.includeStack instead.');
-            return config.includeStack;
+            return $idGob.includeStack;
         },
         set: function(value) {
             console.warn('Assertion.includeStack is deprecated, use chai.config.includeStack instead.');
-            config.includeStack = value;
+            $idGob.includeStack = value;
         }
     });
     Object.defineProperty(Assertion, 'showDiff', {
         get: function() {
             console.warn('Assertion.showDiff is deprecated, use chai.config.showDiff instead.');
-            return config.showDiff;
+            return $idGob.showDiff;
         },
         set: function(value) {
             console.warn('Assertion.showDiff is deprecated, use chai.config.showDiff instead.');
-            config.showDiff = value;
+            $idGob.showDiff = value;
         }
     });
     Assertion.addProperty = function(name, fn) {
@@ -9165,7 +9019,7 @@ module.exports = function(_chai, util) {
         var ok = util.test(this, arguments);
         if (false !== showDiff) showDiff = true;
         if (undefined === expected && undefined === _actual) showDiff = false;
-        if (true !== config.showDiff) showDiff = false;
+        if (true !== $idGob.showDiff) showDiff = false;
         if (!ok) {
             msg = util.getMessage(this, arguments);
             var actual = util.getActual(this, arguments);
@@ -9176,7 +9030,7 @@ module.exports = function(_chai, util) {
             };
             var operator = util.getOperator(this, arguments);
             if (operator) assertionErrorObjectProperties.operator = operator;
-            throw new AssertionError(msg, assertionErrorObjectProperties, config.includeStack ? this.assert : flag(this, 'ssfi'));
+            throw new AssertionError(msg, assertionErrorObjectProperties, $idGob.includeStack ? this.assert : flag(this, 'ssfi'));
         }
     };
     /*!
@@ -9195,7 +9049,9 @@ module.exports = function(_chai, util) {
     });
 };
 
-},{"./config":"aLW00"}],"lsRwd":[function(require,module,exports) {
+});
+
+parcelRequire.register("gdra4", function(module, exports) {
 /*!
  * chai
  * http://chaijs.com
@@ -12206,7 +12062,9 @@ module.exports = function(_chai, util) {
     });
 };
 
-},{}],"jkhM5":[function(require,module,exports) {
+});
+
+parcelRequire.register("i4BPw", function(module, exports) {
 /*!
  * chai
  * Copyright(c) 2011-2014 Jake Luer <jake@alogicalparadox.com>
@@ -12249,7 +12107,9 @@ module.exports = function(_chai, util) {
     };
 };
 
-},{}],"3DF6Y":[function(require,module,exports) {
+});
+
+parcelRequire.register("1vy9T", function(module, exports) {
 /*!
  * chai
  * Copyright(c) 2011-2014 Jake Luer <jake@alogicalparadox.com>
@@ -12436,7 +12296,9 @@ module.exports = function(_chai, util) {
     chai.Should = loadShould;
 };
 
-},{}],"45DFw":[function(require,module,exports) {
+});
+
+parcelRequire.register("948wg", function(module, exports) {
 /*!
  * chai
  * Copyright(c) 2011-2014 Jake Luer <jake@alogicalparadox.com>
@@ -15032,12 +14894,19 @@ module.exports = function(_chai, util) {
     })('isOk', 'ok')('isNotOk', 'notOk')('throws', 'throw')('throws', 'Throw')('isExtensible', 'extensible')('isNotExtensible', 'notExtensible')('isSealed', 'sealed')('isNotSealed', 'notSealed')('isFrozen', 'frozen')('isNotFrozen', 'notFrozen')('isEmpty', 'empty')('isNotEmpty', 'notEmpty');
 };
 
-},{}],"4h6S5":[function(require,module,exports) {
-var global1 = arguments[3];
+});
+
+
+
+
+
+
+var $8Kzcj = parcelRequire("8Kzcj");
+var $8689aadd8a4f2c28$exports = {};
 // mocha@9.1.3 in javascript ES2018
 (function(global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.mocha = factory());
-})(this, function() {
+    typeof $8689aadd8a4f2c28$exports === 'object' && "object" !== 'undefined' ? $8689aadd8a4f2c28$exports = factory() : typeof define === 'function' && define.amd ? define(factory) : (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.mocha = factory());
+})($8689aadd8a4f2c28$exports, function() {
     'use strict';
     var global$2 = typeof global$1 !== "undefined" ? global$1 : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {
     };
@@ -15229,7 +15098,7 @@ var global1 = arguments[3];
         config: config$1,
         uptime: uptime$1
     };
-    var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global1 !== 'undefined' ? global1 : typeof self !== 'undefined' ? self : {
+    var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof $parcel$global !== 'undefined' ? $parcel$global : typeof self !== 'undefined' ? self : {
     };
     function createCommonjsModule(fn, basedir, module) {
         return module = {
@@ -26076,7 +25945,7 @@ var global1 = arguments[3];
    * @module utils
    */ /**
    * Module dependencies.
-   */ const { nanoid  } = nonSecure;
+   */ const { nanoid: nanoid  } = nonSecure;
         const MOCHA_ID_PROP_NAME = '__mocha_id__';
         /**
    * Inherit the prototype methods from one constructor into another.
@@ -26532,7 +26401,7 @@ var global1 = arguments[3];
             ];
         };
         exports.constants = exports.defineConstants({
-            MOCHA_ID_PROP_NAME
+            MOCHA_ID_PROP_NAME: MOCHA_ID_PROP_NAME
         });
         /**
    * Creates a new unique identifier
@@ -27089,7 +26958,7 @@ var global1 = arguments[3];
             }
         }
         module.exports = common$11(exports);
-        const { formatters  } = module.exports;
+        const { formatters: formatters  } = module.exports;
         /**
    * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
    */ formatters.j = function(v) {
@@ -27100,7 +26969,7 @@ var global1 = arguments[3];
             }
         };
     });
-    const { format  } = util;
+    const { format: format  } = util;
     /**
    * Contains error codes, factory functions to create throwable error objects,
    * and warning/deprecation functions.
@@ -27474,7 +27343,7 @@ var global1 = arguments[3];
    * @param {*} [opts.pluginImpl] - Plugin Implementation (user-supplied)
    * @public
    * @returns {Error} Error with code {@link constants.INVALID_PLUGIN_DEFINITION}
-   */ function createInvalidPluginImplementationError(msg, { pluginDef , pluginImpl  } = {
+   */ function createInvalidPluginImplementationError(msg, { pluginDef: pluginDef , pluginImpl: pluginImpl  } = {
     }) {
         const err = new Error(msg);
         err.code = constants$4.INVALID_PLUGIN_IMPLEMENTATION;
@@ -27522,29 +27391,29 @@ var global1 = arguments[3];
         createFatalError: createFatalError$1,
         createForbiddenExclusivityError: createForbiddenExclusivityError$1,
         createInvalidArgumentTypeError: createInvalidArgumentTypeError$1,
-        createInvalidArgumentValueError,
+        createInvalidArgumentValueError: createInvalidArgumentValueError,
         createInvalidExceptionError: createInvalidExceptionError$2,
         createInvalidInterfaceError: createInvalidInterfaceError1,
-        createInvalidLegacyPluginError,
-        createInvalidPluginDefinitionError,
-        createInvalidPluginError,
-        createInvalidPluginImplementationError,
+        createInvalidLegacyPluginError: createInvalidLegacyPluginError,
+        createInvalidPluginDefinitionError: createInvalidPluginDefinitionError,
+        createInvalidPluginError: createInvalidPluginError,
+        createInvalidPluginImplementationError: createInvalidPluginImplementationError,
         createInvalidReporterError: createInvalidReporterError1,
         createMissingArgumentError: createMissingArgumentError$1,
         createMochaInstanceAlreadyDisposedError: createMochaInstanceAlreadyDisposedError1,
         createMochaInstanceAlreadyRunningError: createMochaInstanceAlreadyRunningError1,
         createMultipleDoneError: createMultipleDoneError$1,
-        createNoFilesMatchPatternError,
+        createNoFilesMatchPatternError: createNoFilesMatchPatternError,
         createTimeoutError: createTimeoutError$1,
-        createUnparsableFileError,
+        createUnparsableFileError: createUnparsableFileError,
         createUnsupportedError: createUnsupportedError$2,
-        deprecate,
+        deprecate: deprecate,
         isMochaError: isMochaError$1,
         warn: warn1
     };
     var EventEmitter$1 = EventEmitter$2.EventEmitter;
     var debug$1 = browser('mocha:runnable');
-    const { createInvalidExceptionError: createInvalidExceptionError$1 , createMultipleDoneError , createTimeoutError  } = errors;
+    const { createInvalidExceptionError: createInvalidExceptionError$1 , createMultipleDoneError: createMultipleDoneError , createTimeoutError: createTimeoutError  } = errors;
     /**
    * Save timer references to avoid Sinon interfering (see GH-237).
    * @private
@@ -27946,10 +27815,10 @@ var global1 = arguments[3];
         /**
    * Module dependencies.
    * @private
-   */ const { EventEmitter  } = EventEmitter$2;
-        var { assignNewMochaID , clamp , constants: utilsConstants , defineConstants , getMochaID , inherits , isString  } = utils;
+   */ const { EventEmitter: EventEmitter  } = EventEmitter$2;
+        var { assignNewMochaID: assignNewMochaID , clamp: clamp , constants: utilsConstants , defineConstants: defineConstants , getMochaID: getMochaID , inherits: inherits , isString: isString  } = utils;
         const debug = browser('mocha:suite');
-        const { MOCHA_ID_PROP_NAME  } = utilsConstants;
+        const { MOCHA_ID_PROP_NAME: MOCHA_ID_PROP_NAME  } = utilsConstants;
         /**
    * Expose `Suite`.
    */ module.exports = Suite;
@@ -28463,7 +28332,7 @@ var global1 = arguments[3];
     var STATE_PENDING = runnable1.constants.STATE_PENDING;
     var stackFilter = utils.stackTraceFilter();
     var stringify = utils.stringify;
-    const { createInvalidExceptionError , createUnsupportedError: createUnsupportedError$1 , createFatalError , isMochaError , constants: errorConstants  } = errors;
+    const { createInvalidExceptionError: createInvalidExceptionError , createUnsupportedError: createUnsupportedError$1 , createFatalError: createFatalError , isMochaError: isMochaError , constants: errorConstants  } = errors;
     /**
    * Non-enumerable globals.
    * @private
@@ -32298,8 +32167,8 @@ var global1 = arguments[3];
    * mocha
    * Copyright(c) 2011 TJ Holowaychuk <tj@vision-media.ca>
    * MIT Licensed
-   */ const { warn , createInvalidReporterError , createInvalidInterfaceError , createMochaInstanceAlreadyDisposedError , createMochaInstanceAlreadyRunningError , createUnsupportedError  } = errors;
-        const { EVENT_FILE_PRE_REQUIRE , EVENT_FILE_POST_REQUIRE , EVENT_FILE_REQUIRE  } = suite1.constants;
+   */ const { warn: warn , createInvalidReporterError: createInvalidReporterError , createInvalidInterfaceError: createInvalidInterfaceError , createMochaInstanceAlreadyDisposedError: createMochaInstanceAlreadyDisposedError , createMochaInstanceAlreadyRunningError: createMochaInstanceAlreadyRunningError , createUnsupportedError: createUnsupportedError  } = errors;
+        const { EVENT_FILE_PRE_REQUIRE: EVENT_FILE_PRE_REQUIRE , EVENT_FILE_POST_REQUIRE: EVENT_FILE_POST_REQUIRE , EVENT_FILE_REQUIRE: EVENT_FILE_REQUIRE  } = suite1.constants;
         var debug = browser('mocha:mocha');
         exports = module.exports = Mocha;
         /**
@@ -33133,10 +33002,10 @@ var global1 = arguments[3];
                 };
                 const failureCount = await runner.runAsync({
                     files: this.files,
-                    options
+                    options: options
                 });
                 if (this.options.enableGlobalTeardown && this.hasGlobalTeardownFixtures()) await this.runGlobalTeardown(runner, {
-                    context
+                    context: context
                 });
                 return failureCount;
             };
@@ -33152,7 +33021,7 @@ var global1 = arguments[3];
    * Assigns hooks to the root suite
    * @param {MochaRootHookObject} [hooks] - Hooks to assign to root suite
    * @chainable
-   */ Mocha.prototype.rootHooks = function rootHooks({ beforeAll =[] , beforeEach =[] , afterAll =[] , afterEach =[]  } = {
+   */ Mocha.prototype.rootHooks = function rootHooks({ beforeAll: beforeAll = [] , beforeEach: beforeEach = [] , afterAll: afterAll = [] , afterEach: afterEach = []  } = {
         }) {
             beforeAll = utils.castArray(beforeAll);
             beforeEach = utils.castArray(beforeEach);
@@ -33251,7 +33120,7 @@ var global1 = arguments[3];
    * @returns {Promise<object>} Context object
    */ Mocha.prototype.runGlobalSetup = async function runGlobalSetup(context = {
         }) {
-            const { globalSetup  } = this.options;
+            const { globalSetup: globalSetup  } = this.options;
             if (globalSetup && globalSetup.length) {
                 debug('run(): global setup starting');
                 await this._runGlobalFixtures(globalSetup, context);
@@ -33270,7 +33139,7 @@ var global1 = arguments[3];
    * @returns {Promise<object>} Context object
    */ Mocha.prototype.runGlobalTeardown = async function runGlobalTeardown(context = {
         }) {
-            const { globalTeardown  } = this.options;
+            const { globalTeardown: globalTeardown  } = this.options;
             if (globalTeardown && globalTeardown.length) {
                 debug('run(): global teardown starting');
                 await this._runGlobalFixtures(globalTeardown, context);
@@ -33515,9 +33384,10 @@ var global1 = arguments[3];
     return browserEntry;
 });
 
-},{}],"8vUaJ":[function(require,module,exports) {
+
+parcelRequire.register("9Xlpv", function(module, exports) {
 !function(t, e) {
-    "object" == typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.eruda = e() : t.eruda = e();
+    "object" == typeof exports && "object" == "object" ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.eruda = e() : t.eruda = e();
 }(window, function() {
     var c1, d1;
     function e1(t) {
@@ -52902,17 +52772,19 @@ var global1 = arguments[3];
     }, e1.p = "/assets/", e1(e1.s = 30);
 });
 
-},{}],"8VWxN":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = `
+});
+
+
+var $9Xlpv = parcelRequire("9Xlpv");
+var $a2af998e570dba9d$export$2e2bcd8739ae039 = `
 @charset "utf-8";body{margin:0}#mocha{padding: 0; font:20px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;margin:60px 50px}#mocha li,#mocha ul{margin:0;padding:0}#mocha ul{list-style:none}#mocha h1,#mocha h2{margin:0}#mocha h1{margin-top:15px;font-size:1em;font-weight:200}#mocha h1 a{text-decoration:none;color:inherit}#mocha h1 a:hover{text-decoration:underline}#mocha .suite .suite h1{margin-top:0;font-size:.8em}#mocha .hidden{display:none}#mocha h2{font-size:12px;font-weight:400;cursor:pointer}#mocha .suite{margin-left:15px}#mocha .test{margin-left:15px;overflow:hidden}#mocha .test.pending:hover h2::after{content:'(pending)';font-family:arial,sans-serif}#mocha .test.pass.medium .duration{background:#c09853}#mocha .test.pass.slow .duration{background:#b94a48}#mocha .test.pass::before{content:'✓';font-size:12px;display:block;float:left;margin-right:5px;color:#00d6b2}#mocha .test.pass .duration{font-size:9px;margin-left:5px;padding:2px 5px;color:#fff;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.2);-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.2);box-shadow:inset 0 1px 1px rgba(0,0,0,.2);-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px}#mocha .test.pass.fast .duration{display:none}#mocha .test.pending{color:#0b97c4}#mocha .test.pending::before{content:'◦';color:#0b97c4}#mocha .test.fail{color:#c00}#mocha .test.fail pre{color:#000}#mocha .test.fail::before{content:'✖';font-size:12px;display:block;float:left;margin-right:5px;color:#c00}#mocha .test pre.error{color:#c00;max-height:300px;overflow:auto}#mocha .test .html-error{overflow:auto;color:#000;display:block;float:left;clear:left;font:12px/1.5 monaco,monospace;margin:5px;padding:15px;border:1px solid #eee;max-width:85%;max-width:-webkit-calc(100% - 42px);max-width:-moz-calc(100% - 42px);max-width:calc(100% - 42px);max-height:300px;word-wrap:break-word;border-bottom-color:#ddd;-webkit-box-shadow:0 1px 3px #eee;-moz-box-shadow:0 1px 3px #eee;box-shadow:0 1px 3px #eee;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}#mocha .test .html-error pre.error{border:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:0;-moz-box-shadow:0;box-shadow:0;padding:0;margin:0;margin-top:18px;max-height:none}#mocha .test pre{display:block;float:left;clear:left;font:12px/1.5 monaco,monospace;margin:5px;padding:15px;border:1px solid #eee;max-width:85%;max-width:-webkit-calc(100% - 42px);max-width:-moz-calc(100% - 42px);max-width:calc(100% - 42px);word-wrap:break-word;border-bottom-color:#ddd;-webkit-box-shadow:0 1px 3px #eee;-moz-box-shadow:0 1px 3px #eee;box-shadow:0 1px 3px #eee;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}#mocha .test h2{position:relative}#mocha .test a.replay{position:absolute;top:3px;right:0;text-decoration:none;vertical-align:middle;display:block;width:15px;height:15px;line-height:15px;text-align:center;background:#eee;font-size:15px;-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;-o-transition:opacity .2s;transition:opacity .2s;opacity:.3;color:#888}#mocha .test:hover a.replay{opacity:1}#mocha-report.pass .test.fail{display:none}#mocha-report.fail .test.pass{display:none}#mocha-report.pending .test.fail,#mocha-report.pending .test.pass{display:none}#mocha-report.pending .test.pass.pending{display:block}#mocha-error{color:#c00;font-size:1.5em;font-weight:100;letter-spacing:1px}#mocha-stats{position:absolute;top:0;right:10px;font-size:12px;margin:0;color:#888;z-index:1}#mocha-stats .progress{float:right;padding-top:0;height:auto;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background-color:initial}#mocha-stats em{color:#000}#mocha-stats a{text-decoration:none;color:inherit}#mocha-stats a:hover{border-bottom:1px solid #eee}#mocha-stats li{display:inline-block;margin:0 5px;list-style:none;padding-top:11px}#mocha-stats canvas{width:40px;height:40px}#mocha code .comment{color:#ddd}#mocha code .init{color:#2f6fad}#mocha code .string{color:#5890ad}#mocha code .keyword{color:#8a6343}#mocha code .number{color:#2f6fad}@media screen and (max-device-width:480px){#mocha{margin:60px 0}#mocha #stats{position:absolute}}
 `;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"8FsVl"}],"9YfpN":[function(require,module,exports) {
+
+var $9ce3738ba7bda4ff$exports = {};
 /*! eruda-dom v2.0.0 https://github.com/liriliri/eruda-dom#readme */ !function(e, t) {
-    "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.erudaDom = t() : e.erudaDom = t();
-}("undefined" != typeof self ? self : this, function() {
+    "object" == typeof $9ce3738ba7bda4ff$exports && "object" == "object" ? $9ce3738ba7bda4ff$exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof $9ce3738ba7bda4ff$exports ? $9ce3738ba7bda4ff$exports.erudaDom = t() : e.erudaDom = t();
+}("undefined" != typeof self ? self : $9ce3738ba7bda4ff$exports, function() {
     return (function(e1) {
         function t1(r) {
             if (n1[r]) return n1[r].exports;
@@ -54979,7 +54851,87 @@ exports.default = `
     ]);
 });
 
-},{}]},["lA64e"], "lA64e", "parcelRequire1eac")
+
+let $87175aded8776051$var$mochaHtml = `<div id="tests" style="position: relative"><ul id="mocha"></ul></div><style>${$a2af998e570dba9d$export$2e2bcd8739ae039}</style>`;
+let $87175aded8776051$export$72b97afbffd520d6 = (path = false, checkLeaks = true)=>{
+    return new Promise(async (resolve, reject)=>{
+        try {
+            (/*@__PURE__*/$parcel$interopDefault($8689aadd8a4f2c28$exports)).setup('bdd');
+            path ? await $8Kzcj.default(path) : await $8Kzcj.default();
+            document.body.insertAdjacentHTML('beforeend', $87175aded8776051$var$mochaHtml);
+            checkLeaks ? (/*@__PURE__*/$parcel$interopDefault($8689aadd8a4f2c28$exports)).checkLeaks() : (/*@__PURE__*/$parcel$interopDefault($8689aadd8a4f2c28$exports)).setup({
+                ignoreLeaks: true
+            });
+            (/*@__PURE__*/$parcel$interopDefault($8689aadd8a4f2c28$exports)).run();
+            resolve(true);
+        } catch (e) {
+            reject({
+                success: false,
+                status: "false",
+                message: e
+            });
+        }
+    });
+};
+let $87175aded8776051$export$d78ecc9e7d36ee9e = async ()=>{
+    try {
+        (/*@__PURE__*/$parcel$interopDefault($9Xlpv)).init();
+        (/*@__PURE__*/$parcel$interopDefault($9Xlpv)).add((/*@__PURE__*/$parcel$interopDefault($9ce3738ba7bda4ff$exports)));
+        return {
+            success: true,
+            status: "true",
+            message: ''
+        };
+    } catch (e) {
+        return {
+            success: false,
+            status: "false",
+            message: e
+        };
+    }
+};
+let $87175aded8776051$export$8837f4fc672e936d = (url = location.hostname === "localhost" ? 'http://localhost:6542/tests/list.json' : 'https://zababurinsv.github.io/tests/list.json')=>{
+    return new Promise((resolve, reject)=>{
+        try {
+            fetch(url).then((data1)=>{
+                data1.text().then((data)=>{
+                    resolve(JSON.parse(data));
+                }).catch((e)=>{
+                    resolve({
+                        status: false,
+                        error: e
+                    });
+                });
+            }).catch((e)=>{
+                resolve({
+                    status: false,
+                    error: e
+                });
+            });
+        } catch (e) {
+            resolve({
+                success: false,
+                status: "false",
+                message: e
+            });
+        }
+    });
+};
+var $87175aded8776051$export$2e2bcd8739ae039 = (/*@__PURE__*/$parcel$interopDefault($0b047f38911a2ae2$exports));
+
+
+(async ()=>{
+    await $87175aded8776051$export$d78ecc9e7d36ee9e();
+    $87175aded8776051$export$72b97afbffd520d6('http://localhost:4548/tests/service.tests.mjs').catch((e)=>{
+        console.log('error devtool', e);
+    });
+// tests().catch(e => {console.log('error devtool', e)})
+// tests('./tests/service.tests.mjs', true).catch(e => {console.log('error devtool', e)})
+// console.log(await list())
+// await tests()
+// await tests(`/newkind-fs/${test[`newkind-fs`]}`)
+})();
+
 
 </script>
 </html>
