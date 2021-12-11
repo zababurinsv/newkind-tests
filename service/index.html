@@ -54922,11 +54922,11 @@ var $87175aded8776051$export$2e2bcd8739ae039 = (/*@__PURE__*/$parcel$interopDefa
 
 (async ()=>{
     await $87175aded8776051$export$d78ecc9e7d36ee9e();
-    $87175aded8776051$export$72b97afbffd520d6('http://localhost:4548/tests/service.tests.mjs').catch((e)=>{
+    // tests('http://localhost:4548/tests/service.tests.mjs').catch(e => {console.log('error devtool', e)})
+    // tests().catch(e => {console.log('error devtool', e)})
+    $87175aded8776051$export$72b97afbffd520d6('./tests/service.tests.mjs', true).catch((e)=>{
         console.log('error devtool', e);
     });
-// tests().catch(e => {console.log('error devtool', e)})
-// tests('./tests/service.tests.mjs', true).catch(e => {console.log('error devtool', e)})
 // console.log(await list())
 // await tests()
 // await tests(`/newkind-fs/${test[`newkind-fs`]}`)
