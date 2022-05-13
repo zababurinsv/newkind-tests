@@ -7,16 +7,10 @@
 </head>
 <body></body>
 <script type="module">
-    import { tests, list, devTool } from './index.mjs'
-    (async () => {
-        await devTool()
-        // tests('http://localhost:4548/tests/service.tests.mjs').catch(e => {console.log('error devtool', e)})
-        // tests().catch(e => {console.log('error devtool', e)})
-        tests('./tests/service.tests.mjs', true).catch(e => {console.log('error devtool', e)})
+    import { test } from './index.mjs'
 
-        // console.log(await list())
-        // await tests()
-        // await tests(`/newkind-fs/${test[`newkind-fs`]}`)
+    (async () => {
+        test('./tests/service.tests.mjs', true).catch(e => {console.log('error devtool', e)})
     })()
 </script>
 </html>

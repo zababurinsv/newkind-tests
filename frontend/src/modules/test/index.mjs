@@ -1,9 +1,9 @@
-import isEmpty from './isEmpty/isEmpty.mjs'
-import events from '@newkind/events'
+import isEmpty from '../isEmpty/isEmpty.mjs'
+import events from '../@newkind/events/dist/index.mjs'
 import pushkin from './default/pushkin.index.mjs'
-import { assert as assert } from 'chai';  // Using Assert style
-import { expect as expect } from 'chai';  // Using Expect style
-import { should as should } from 'chai';  // Using Should style
+import { assert } from '../chai/index.mjs'
+import { expect } from '../chai/index.mjs'
+import { should } from '../chai/index.mjs'
 
 export default ( url = false ) => {
   return new Promise(async (resolve, reject) => {
