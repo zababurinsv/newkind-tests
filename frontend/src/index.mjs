@@ -17,9 +17,10 @@ export const test = ( path = false, checkLeaks = true) => {
                 ? await Test(path)
                 : await Test()
             document.body.insertAdjacentHTML('beforeend', mochaHtml);
+            // Mocha.setup({ignoreLeaks: true});
             (checkLeaks)
                 ? Mocha.checkLeaks()
-                : Mocha.setup({ignoreLeaks: true})
+                : ''
             Mocha.run()
             resolve(true)
         } catch (e) {
